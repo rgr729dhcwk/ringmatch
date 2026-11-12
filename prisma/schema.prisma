@@ -1,0 +1,164 @@
+// RingMatch data model. SQLite in dev (prisma/dev.db, gitignored).
+// Attribute columns are plain strings; values are validated by Zod against src/lib/taxonomy.ts.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Listing {
+  id              String   @id @default(cuid())
+  sourceId        String
+  externalId      String?
+  sourceUrl       String?
+  retailer        String
+  attribution     String
+  title           String
+  price           Float?
+  currency        String   @default("USD")
+  priceIsEstimate Boolean  @default(false)
+  isSample        Boolean  @default(false)
+
+  // Taxonomy attributes (nullable = unknown)
+  shape       String?
+  cut         String?
+  color       String?
+  clarity     String?
+  caratWeight Float?
+  origin      String?
+  centerStone String?
+  setting     String?
+  prongs      String?
+  metal       String?
+  bandWidthMm Float?
+  bandStyle   String?
+  bandProfile String?
+
+  renderType String // photo | 360 | cad | procedural
+  has360     Boolean  @default(false)
+  lastSeenAt DateTime @default(now())
+  active     Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  images         ListingImage[]
+  interactions   Interaction[]
+  shortlist      ShortlistOrder[]
+  ingestLogs     IngestLog[]
+
+  @@unique([sourceId, externalId])
+  @@index([active])
+}
+
+model ListingImage {
+  id          String   @id @default(cuid())
+  listingId   String
+  listing     Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  url         String
+  kind        String // photo | 360 | cad
+  width       Int
+  height      Int
+  validatedAt DateTime
+  position    Int      @default(0)
+
+  @@index([listingId, position])
+}
+
+model IngestLog {
+  id         String   @id @default(cuid())
+  sourceId   String
+  externalId String?
+  listingId  String?
+  listing    Listing? @relation(fields: [listingId], references: [id], onDelete: SetNull)
+  outcome    String // accepted | fell_back_procedural | rejected
+  reason     String?
+  detail     String? // JSON: per-image check failures etc.
+  createdAt  DateTime @default(now())
+
+  @@index([sourceId, createdAt])
+}
+
+// Auth.js-ready: email is optional now (local cookie profiles); Account/Session models can be added later.
+model User {
+  id            String    @id @default(cuid())
+  displayName   String
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  createdAt     DateTime  @default(now())
+
+  profile          Profile?
+  interactions     Interaction[]
+  shortlist        ShortlistOrder[]
+  preferenceVector PreferenceVector?
+  couplesAsA       Couple[]          @relation("CoupleA")
+  couplesAsB       Couple[]          @relation("CoupleB")
+}
+
+model Profile {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  statedPrefs String   @default("{}") // JSON of StatedPrefs (src/lib/taxonomy.ts)
+  exploreRate Float    @default(0.3)
+  onboardedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Append-only. An undo is its own row pointing at the row it cancels.
+model Interaction {
+  id        String        @id @default(cuid())
+  userId    String
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  listingId String
+  listing   Listing       @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  action    String // dislike | like | revisit | love | undo
+  undoesId  String?       @unique
+  undoes    Interaction?  @relation("Undo", fields: [undoesId], references: [id])
+  undoneBy  Interaction?  @relation("Undo")
+  coupleId  String? // set when swiping in partner mode (Milestone 5)
+  createdAt DateTime      @default(now())
+
+  @@index([userId, createdAt])
+  @@index([listingId])
+}
+
+model ShortlistOrder {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  listingId String
+  listing   Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  tier      String   @default("maybe") // e.g. top | maybe (Milestone 3)
+  rank      Int      @default(0)
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, listingId])
+}
+
+model Couple {
+  id           String   @id @default(cuid())
+  userAId      String
+  userA        User     @relation("CoupleA", fields: [userAId], references: [id], onDelete: Cascade)
+  userBId      String?
+  userB        User?    @relation("CoupleB", fields: [userBId], references: [id], onDelete: SetNull)
+  inviteCode   String   @unique
+  blendWeightA Float    @default(0.5)
+  surpriseA    Boolean  @default(false)
+  surpriseB    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+}
+
+model PreferenceVector {
+  id               String   @id @default(cuid())
+  userId           String   @unique
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  vector           String   @default("{}") // JSON
+  interactionCount Int      @default(0)
+  computedAt       DateTime @default(now())
+}

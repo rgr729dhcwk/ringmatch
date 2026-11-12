@@ -42,6 +42,9 @@ npm run test:e2e       # Playwright; builds the app into .next-e2e and uses pris
 npm run typecheck
 ```
 
+Hosting for trials: `render.yaml` (Render free plan). `npm run start:render` = db push + seed + start on `$PORT`.
+The Render DB is temporary SQLite (resets on restart) — fine for trials, not for keeping data.
+
 ## Style
 TypeScript strict (`noUncheckedIndexedAccess` on). Tailwind v4 tokens are in `src/app/globals.css`.
 Mobile-first: design at phone width first. Keep tests passing; add e2e coverage for new interactions.

@@ -28,6 +28,16 @@ npm run dev
 Open http://localhost:3000 (the server listens on all interfaces, so other devices on your network can use
 `http://<your-computer's-IP>:3000`).
 
+## Trying it online (Render, free)
+`render.yaml` sets RingMatch up as a free Render web service:
+1. Go to https://render.com and sign up with your GitHub account.
+2. Choose **New → Blueprint**, connect the `ringmatch` repository, and click **Apply**.
+3. When the deploy finishes (about 5 minutes), open the `…onrender.com` link Render shows, on any device.
+
+Free-plan notes: the app sleeps after ~15 minutes without visitors (the next visit takes about a minute to
+wake it), and profiles/swipes reset whenever it restarts or redeploys. The sample rings reload automatically.
+Every push to `main` redeploys it.
+
 ## Tests
 ```bash
 npm test            # unit tests (fast)

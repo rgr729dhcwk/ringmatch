@@ -1,0 +1,18 @@
+# Render Blueprint: free web service for trialing RingMatch.
+# Free-plan notes: the app sleeps after ~15 min idle (first visit then takes ~1 min), and the
+# SQLite database lives on temporary disk, so profiles/swipes reset on every restart or deploy.
+# The sample rings are re-loaded automatically at each start.
+services:
+  - type: web
+    name: ringmatch
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start:render
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATABASE_URL
+        value: file:./render.db

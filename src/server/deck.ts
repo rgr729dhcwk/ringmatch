@@ -2,6 +2,7 @@ import { buildDeck, type Card } from "@/lib/card";
 import { effectiveInteractions } from "@/recs/preferenceVector";
 import { rankDeck } from "@/recs/rank";
 import { db } from "./db";
+import { getPartnerContext } from "./couple";
 import { loadSignals } from "./taste";
 
 export type DeckResult = { cards: Card[]; total: number };
@@ -14,10 +15,13 @@ export async function getDeckForUser(
   userId: string,
   opts: { includeSeen?: boolean; exclude?: string[] } = {},
 ): Promise<DeckResult> {
-  const [rows, signals] = await Promise.all([
+  const [rows, signals, partner] = await Promise.all([
     db.listing.findMany({ where: { active: true }, include: { images: { orderBy: { position: "asc" } }, videos: { orderBy: { position: "asc" } } } }),
     loadSignals(userId),
+    getPartnerContext(userId),
   ]);
+  // Partner mode: blend in my partner's taste — but only if their swipes are visible to me.
+  const partnerSignals = partner?.partnerVisible && partner.partnerId ? await loadSignals(partner.partnerId) : null;
   const seen = opts.includeSeen ? new Set<string>() : new Set(effectiveInteractions(signals.events).map((e) => e.listingId));
   for (const id of opts.exclude ?? []) seen.add(id);
 
@@ -44,6 +48,9 @@ export async function getDeckForUser(
       vector: signals.vector,
       exploreRate: signals.exploreRate,
       seed: `${userId}:${signals.interactionCount}`,
+      partner: partnerSignals
+        ? { vector: partnerSignals.vector, myWeight: partner!.myWeight, name: partner!.partnerName ?? "your partner" }
+        : undefined,
     },
   );
   return { cards: ranked.map((r) => ({ ...r.item, why: r.why, explore: r.explore })), total };

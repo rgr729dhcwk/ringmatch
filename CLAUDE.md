@@ -37,9 +37,13 @@ The plan is approved — follow it, don't re-plan. The user is not a developer; 
   `removedAt` hides until re-saved, `validateLayout` only accepts a rearrangement. Server: `src/server/shortlist.ts`
 - `src/components/shortlist/` ShortlistBoard (dnd-kit multi-tier sortable + tier menu + keyboard), CompareView
   (one live WebGL column at a time)
+- Partner mode: `src/lib/couple.ts` (pure: invite codes, `viewFor`, `blendVectors`, `computeMatches`),
+  `src/server/couple.ts`, `/partner` page + server actions. Surprise = a partner hides THEIR swipes; never leak a
+  hidden partner's likes (matches, taste, match pop-ups, deck blend, why-lines). Why-lines name the partner.
+- Retailer videos: `ListingVideo` model, `Card.videos`; extras only — never the required visual.
 - `src/lib/prefs.ts` Zod schema for stated prefs (every field defaults to ANY = "show me everything")
 - `src/app/` pages (`/profiles`, `/onboarding`, `/`, `/taste`) + route handlers (`/api/interactions`, `/api/interactions/undo`,
-  `/api/deck`, `/api/taste`, `/api/shortlist` (GET/PUT), `/api/shortlist/remove`, `/api/health`); pages also `/shortlist`, `/shortlist/compare?ids=`; `/dev/ring?id=` is dev-only
+  `/api/deck`, `/api/taste`, `/api/shortlist` (GET/PUT), `/api/shortlist/remove`, `/api/health`); pages also `/shortlist`, `/shortlist/compare?ids=`, `/partner`; `/dev/ring?id=` is dev-only
 - The deck client re-fetches `/api/deck` every 3 swipes and keeps the two on-screen cards; never show a card twice.
 - `src/components/deck/` SwipeDeck, SwipeCard (own tap detection → detail), ActionBar, CardVisual, CardDetail
   (gallery + interactive 3D; deck card releases its canvas while open)

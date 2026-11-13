@@ -7,11 +7,29 @@ import type { Contribution } from "./score";
 export const WHY_EXPLORE = "Something different — helps RingMatch learn your taste";
 export const WHY_FRESH = "A fresh style to start you off";
 
+/** Partner mode: whose taste each learned feature came from. */
+export type Attribution = { mine: PreferenceVector; partner: PreferenceVector; partnerName: string };
+
 /** Explains a card from its score contributions. */
-export function whyLine(contributions: Contribution[], explore: boolean): string {
+export function whyLine(contributions: Contribution[], explore: boolean, attribution?: Attribution): string {
   if (explore) return WHY_EXPLORE;
   const positive = contributions.filter((c) => c.value > 0.12);
   const learned = dedupe(positive.filter((c) => c.source === "learned"));
+  if (learned.length && attribution) {
+    const who = (f: string) => {
+      const m = (attribution.mine[f] ?? 0) > 0;
+      const p = (attribution.partner[f] ?? 0) > 0;
+      return m && p ? "both" : p ? "partner" : m ? "me" : null;
+    };
+    const lead = learned.map((c) => ({ c, w: who(c.feature) })).filter((x) => x.w);
+    if (lead.length) {
+      const kind = lead[0]!.w!;
+      const phrases = joinPhrases(lead.filter((x) => x.w === kind).slice(0, 2).map((x) => phraseFor(x.c.feature)));
+      if (kind === "both") return `You and ${attribution.partnerName} both liked ${phrases}`;
+      if (kind === "partner") return `Because ${attribution.partnerName} liked ${phrases}`;
+      return `Because you liked ${phrases}`;
+    }
+  }
   if (learned.length) return `Because you liked ${joinPhrases(learned.slice(0, 2).map((c) => phraseFor(c.feature)))}`;
   const stated = dedupe(positive.filter((c) => c.source === "stated"));
   if (stated.length) return `Matches what you told us: ${joinPhrases(stated.slice(0, 2).map((c) => phraseFor(c.feature)))}`;

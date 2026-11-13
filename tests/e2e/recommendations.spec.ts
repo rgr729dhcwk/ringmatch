@@ -95,7 +95,8 @@ test.describe("Milestone 2: onboarding, recommendations, taste", () => {
 
   test("preferences can be edited later", async ({ page }) => {
     await createProfile(page, "Editor", ["chip-metals-Platinum"]);
-    await page.getByTestId("nav-prefs").click();
+    await page.getByTestId("nav-taste").click();
+    await page.getByTestId("edit-prefs").click();
     await expect(page.getByTestId("chip-metals-Platinum")).toHaveAttribute("aria-pressed", "true");
     await page.getByTestId("chip-settings-Halo").click();
     await page.getByTestId("onboarding-submit").click();

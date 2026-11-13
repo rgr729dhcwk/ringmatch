@@ -2,6 +2,20 @@
 
 A mobile-first "Tinder for engagement rings". Swipe through ring cards to discover your style.
 
+## What's new — Milestone 5 (partner mode) and retailer videos
+- **Partner mode** (Partner button at the top): invite your partner with a short code (or share a link); they
+  make their own profile on their phone and join.
+  - **Matches**: rings you've both liked, saved or loved, with each of your reactions and the shop link. When you
+    like a ring your partner already liked you get a **"It's a match!"** pop-up.
+  - **Blend slider** — "Whose taste leads the deck?": from mostly yours, through both equally, to mostly theirs.
+    Both decks use the shared blend, and reasons say things like "Because Sam liked oval stones" or
+    "You and Sam both liked halo settings".
+  - **Surprise mode**: hide *your* swipes from your partner (no matches, taste or match pop-ups for them) while you
+    can still see theirs — handy for planning a proposal.
+  - Leave a partnership any time. Preferences moved to **My taste → Edit**.
+- **Retailer videos**: turntable videos from the shops now play in the detail view (**▶ Video** tab); cards with a
+  video show a "video" marker. 36 of the 50 real rings have one. Photos still come first on the card.
+
 ## What's new — revisions after Milestone 4
 - **Real rings from real jewellers, loaded automatically**: 50 engagement rings from **Ring Concierge** (modern,
   lab-grown) and **Trumpet & Horn** (vintage and antique), with their photos, prices and details read from each
@@ -104,6 +118,6 @@ npm run test:e2e    # browser tests on Pixel 7 + desktop Chrome (several minutes
 - `docs/PLAN.md`: approved architecture and milestones
 - `CLAUDE.md`: conventions for contributors and AI sessions
 
-## Coming next (Milestone 5)
-Partner mode: invite your partner with a code, see the rings you both like, blend your tastes with a
-slider, and a surprise mode that hides one partner's swipes.
+## Coming next (Milestone 6)
+Polish: install RingMatch on your phone's home screen (PWA), faster loading by preparing the next cards
+in advance, and an accessibility pass.

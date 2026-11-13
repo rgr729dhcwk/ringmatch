@@ -18,7 +18,9 @@ const announceShortlist = (delta: number) => window.dispatchEvent(new CustomEven
 /** Re-rank the upcoming cards after this many swipes (or sooner when the queue runs low). */
 const REFRESH_EVERY = 3;
 
-async function saveInteraction(listingId: string, action: SwipeAction): Promise<string | null> {
+type MatchInfo = { partnerName: string } | null;
+
+async function saveInteraction(listingId: string, action: SwipeAction, onMatch: (m: NonNullable<MatchInfo>) => void): Promise<string | null> {
   const res = await fetch("/api/interactions", {
     method: "POST",
     headers: { "content-type": "application/json" },
@@ -26,7 +28,9 @@ async function saveInteraction(listingId: string, action: SwipeAction): Promise<
     keepalive: true,
   });
   if (!res.ok) throw new Error(`save failed: ${res.status}`);
-  return ((await res.json()) as { id: string }).id;
+  const body = (await res.json()) as { id: string; match?: MatchInfo };
+  if (body.match) onMatch(body.match);
+  return body.id;
 }
 
 async function saveUndo(interactionId: string) {
@@ -53,6 +57,13 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastAction, setLastAction] = useState<DeckAction | null>(null);
+  const [match, setMatch] = useState<{ partnerName: string; title: string } | null>(null);
+  const matchTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const showMatch = useCallback((partnerName: string, title: string) => {
+    setMatch({ partnerName, title });
+    if (matchTimer.current) clearTimeout(matchTimer.current);
+    matchTimer.current = setTimeout(() => setMatch(null), 3500);
+  }, []);
   // The card shown in the detail view (tap a card to open it).
   const [detail, setDetail] = useState<Card | null>(null);
   const detailRef = useRef<Card | null>(null);
@@ -109,7 +120,7 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
     (action: SwipeAction) => {
       const card = queueRef.current[0];
       if (!card) return;
-      const saved = track(saveInteraction(card.id, action));
+      const saved = track(saveInteraction(card.id, action, (m) => showMatch(m.partnerName, card.title)));
       historyRef.current = [...historyRef.current, { card, action, saved }];
       setHistoryLen(historyRef.current.length);
       setQueue(queueRef.current.slice(1));
@@ -120,7 +131,7 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
       sinceRefresh.current++;
       if (sinceRefresh.current >= REFRESH_EVERY && queueRef.current.length > 2) void refresh();
     },
-    [track, refresh],
+    [track, refresh, showMatch],
   );
 
   const undo = useCallback(() => {
@@ -227,6 +238,19 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
           </div>
         )}
       </div>
+
+      {match && (
+        <div
+          role="status"
+          className="pointer-events-none fixed inset-x-0 top-16 z-40 mx-auto w-fit max-w-[90vw] rounded-2xl bg-love px-4 py-3 text-center text-white shadow-card"
+          data-testid="match-toast"
+        >
+          <p className="font-semibold">💞 It&apos;s a match!</p>
+          <p className="text-xs opacity-90">
+            {match.partnerName} likes “{match.title}” too
+          </p>
+        </div>
+      )}
 
       {error && (
         <p role="status" className="mt-2 rounded-xl bg-red-50 px-3 py-2 text-center text-xs text-red-700" onClick={() => setError(null)}>

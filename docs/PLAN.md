@@ -67,7 +67,7 @@ market estimate. 40 diverse cards covering all shapes, settings and metals.
 - Live site hides the sample rings (`RINGMATCH_SAMPLES=off` in `start:render`).
 
 ## Milestones
-Status: Milestones 1–4 done, plus post-M4 revisions (detail view, retailer imports, Hard no + new weights).
+Status: Milestones 1–5 done, plus post-M4 revisions (detail view, retailer imports + videos, Hard no + new weights).
 
 1. Scaffold; taxonomy/Zod/Prisma; seed adapter + ingest + image checks (unit tests
    with mocked HTTP); 40 sample cards; ProceduralRing + badge; swipe deck (drag, swipe-up love,
@@ -83,4 +83,7 @@ Status: Milestones 1–4 done, plus post-M4 revisions (detail view, retailer imp
    Built as: `manual` source + password-protected /admin form running the normal ingest pipeline;
    export/import JSON (`seed/manual-listings.json` loads on start) because Render's free DB is temporary.
 5. Partner mode (invite code, matches, blend slider, surprise mode).
+   Built as: `src/lib/couple.ts` (pure rules), `src/server/couple.ts`, `/partner`. Couple.blendWeightA is the shared
+   blend (each side sees its own share); surpriseX hides X's swipes from the other (matches, taste, match pop-ups,
+   blended deck). No schema change was needed. Retailer videos: ListingVideo (extra media, never the visual).
 6. Polish (PWA, preloading, accessibility).

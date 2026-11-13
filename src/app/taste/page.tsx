@@ -99,7 +99,7 @@ export default async function TastePage() {
       <section className="rounded-3xl bg-surface p-5 shadow-card">
         <div className="flex items-center justify-between">
           <h2 className="text-sm font-semibold text-ink">What you told us</h2>
-          <Link href="/onboarding" className="text-sm font-semibold text-accent">
+          <Link href="/onboarding" className="text-sm font-semibold text-accent" data-testid="edit-prefs">
             Edit
           </Link>
         </div>

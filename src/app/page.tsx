@@ -35,8 +35,8 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ a
           <Link href="/taste" className="rounded-full bg-surface px-3 py-1.5 font-semibold text-accent shadow-card" data-testid="nav-taste">
             My taste
           </Link>
-          <Link href="/onboarding" className="rounded-full border border-line px-3 py-1.5 text-ink-soft" data-testid="nav-prefs">
-            Preferences
+          <Link href="/partner" className="rounded-full border border-line px-3 py-1.5 text-ink-soft" data-testid="nav-partner">
+            Partner
           </Link>
         </nav>
       </header>

@@ -70,9 +70,11 @@ export const SwipeCard = forwardRef<SwipeCardHandle, Props>(function SwipeCard({
   return (
     <motion.article
       className="absolute inset-0 flex select-none flex-col overflow-hidden rounded-[28px] bg-surface shadow-card"
-      style={isTop ? { x, y, rotate, touchAction: "none" } : undefined}
+      // The peeking card is nudged down via its own wrapper offset (not motion's `y`), so when it
+      // becomes the top card it sits exactly in place and drag/fly-out start from zero.
+      style={isTop ? { x, y, rotate, touchAction: "none" } : { top: 12 }}
       initial={false}
-      animate={isTop ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 1, y: 12 }}
+      animate={isTop ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 1 }}
       drag={isTop}
       dragMomentum={false}
       onDragEnd={isTop ? onDragEnd : undefined}

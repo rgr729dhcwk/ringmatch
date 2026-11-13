@@ -1,7 +1,15 @@
 import { expect, test, type Page } from "@playwright/test";
 import { createProfile, deck, expectNewTopCard, expectTopCardVisual, interactions, topCard, topCardId, waitForSaves } from "./helpers";
 
-type DeckCard = { id: string; title: string; retailer: string; sourceUrl: string | null; visual: { kind: string; images?: unknown[] }; preview3d?: unknown };
+type DeckCard = {
+  id: string;
+  title: string;
+  retailer: string;
+  sourceUrl: string | null;
+  visual: { kind: string; images?: unknown[] };
+  preview3d?: unknown;
+  videos: { url: string; posterUrl: string | null }[];
+};
 
 /** Swipe (like) until the card matching `pick` is on top. */
 async function bringToTop(page: Page, pick: (c: DeckCard) => boolean): Promise<DeckCard> {
@@ -95,5 +103,18 @@ test.describe("tap a card for details", () => {
     expect((await interactions(page))[0]).toMatchObject({ listingId: a, action: "strong_dislike" });
     await page.getByTestId("nav-taste").click();
     await expect(page.getByTestId("count-strong_dislike")).toHaveText("1");
+  });
+
+  test("a retailer video plays in the Video tab, credited to the shop", async ({ page }) => {
+    await createProfile(page);
+    const card = await bringToTop(page, (c) => c.videos.length > 0);
+    await expect(topCard(page).getByTestId("video-chip")).toBeVisible();
+    await expect(topCard(page).getByTestId("tap-hint")).toContainText("video");
+    await page.keyboard.press("Enter");
+    await page.getByTestId("detail-tab-video").click();
+    const video = page.getByTestId("detail-video").locator("video");
+    await expect(video).toHaveAttribute("src", card.videos[0]!.url);
+    await expect(page.getByTestId("detail-video")).toContainText(`Video: ${card.retailer}`);
+    expect(await video.evaluate((v: HTMLVideoElement) => v.muted && v.loop && v.hasAttribute("playsinline"))).toBe(true);
   });
 });

@@ -35,17 +35,19 @@ export function createPrismaIngestStore(db: PrismaClient): IngestStore {
       };
       const now = new Date();
       const images = p.images.map((img, position) => ({ ...img, position, validatedAt: now }));
+      const videos = (p.videos ?? []).map((v, position) => ({ ...v, position, validatedAt: now }));
       return db.$transaction(async (tx) => {
         const existing = l.externalId
           ? await tx.listing.findUnique({ where: { sourceId_externalId: { sourceId: l.sourceId, externalId: l.externalId } } })
           : null;
         if (existing) {
           await tx.listingImage.deleteMany({ where: { listingId: existing.id } });
-          await tx.listing.update({ where: { id: existing.id }, data: { ...data, images: { create: images } } });
+          await tx.listingVideo.deleteMany({ where: { listingId: existing.id } });
+          await tx.listing.update({ where: { id: existing.id }, data: { ...data, images: { create: images }, videos: { create: videos } } });
           return existing.id;
         }
         const created = await tx.listing.create({
-          data: { ...data, sourceId: l.sourceId, externalId: l.externalId, images: { create: images } },
+          data: { ...data, sourceId: l.sourceId, externalId: l.externalId, images: { create: images }, videos: { create: videos } },
         });
         return created.id;
       });

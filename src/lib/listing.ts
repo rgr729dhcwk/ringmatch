@@ -31,6 +31,17 @@ export const ListingImageInputSchema = z.object({
 });
 export type ListingImageInput = z.infer<typeof ListingImageInputSchema>;
 
+/** A product video (e.g. a turntable spin). Optional extra media; the required visual is still a photo or 3D render. */
+export const ListingVideoInputSchema = z.object({
+  url: z.string().url(),
+  posterUrl: z.string().url().nullish(),
+  width: z.number().int().positive().optional(),
+  height: z.number().int().positive().optional(),
+  validatedAt: z.string().datetime().optional(),
+});
+export type ListingVideoInput = z.infer<typeof ListingVideoInputSchema>;
+export type ValidatedVideo = { url: string; posterUrl: string | null; width: number | null; height: number | null };
+
 export const ListingAttributesSchema = z.object({
   shape: opt(z.enum(SHAPES)),
   cut: opt(z.enum(CUTS)),
@@ -61,6 +72,7 @@ export const NormalizedListingSchema = ListingAttributesSchema.extend({
   priceIsEstimate: z.boolean().default(false),
   isSample: z.boolean().default(false),
   images: z.array(ListingImageInputSchema).default([]),
+  videos: z.array(ListingVideoInputSchema).default([]),
 });
 export type NormalizedListing = z.infer<typeof NormalizedListingSchema>;
 

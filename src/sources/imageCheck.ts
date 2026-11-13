@@ -114,6 +114,39 @@ export async function checkImage(url: string, opts: ImageCheckOptions): Promise<
   return checkRemote(url, opts);
 }
 
+export type VideoCheckResult = { ok: true; url: string; contentType: string } | { ok: false; url: string; reason: string };
+export type VideoChecker = (url: string) => Promise<VideoCheckResult>;
+
+/** Check a video URL: HTTP 200/206 and a video/* content-type (only the first bytes are requested). */
+export async function checkVideo(url: string, opts: Pick<ImageCheckOptions, "fetchImpl" | "timeoutMs" | "offline">): Promise<VideoCheckResult> {
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return { ok: false, url, reason: "invalid URL" };
+  }
+  if (parsed.protocol !== "https:") return { ok: false, url, reason: "videos must be https" };
+  if (opts.offline) return { ok: false, url, reason: "offline mode: remote video not checked" };
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), opts.timeoutMs ?? 10_000);
+  try {
+    const res = await (opts.fetchImpl ?? fetch)(url, { headers: { range: "bytes=0-1023" }, signal: ctrl.signal, redirect: "follow" });
+    await res.body?.cancel().catch(() => {});
+    if (res.status !== 200 && res.status !== 206) return { ok: false, url, reason: `HTTP ${res.status}` };
+    const ct = (res.headers.get("content-type") ?? "").split(";")[0]!.trim().toLowerCase();
+    if (!ct.startsWith("video/")) return { ok: false, url, reason: `content-type is "${ct || "missing"}", not video/*` };
+    return { ok: true, url, contentType: ct };
+  } catch (e) {
+    return { ok: false, url, reason: `network error: ${(e as Error).name === "AbortError" ? "timeout" : (e as Error).message}` };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+export function createVideoChecker(opts: Pick<ImageCheckOptions, "fetchImpl" | "timeoutMs" | "offline">): VideoChecker {
+  return (url) => checkVideo(url, opts);
+}
+
 export function createImageChecker(opts: ImageCheckOptions): ImageChecker {
   return (url) => checkImage(url, opts);
 }

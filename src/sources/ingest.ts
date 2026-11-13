@@ -1,7 +1,7 @@
-import { NormalizedListingSchema, type ListingAttributes, type NormalizedListing, type ValidatedImage } from "@/lib/listing";
+import { NormalizedListingSchema, type ListingAttributes, type NormalizedListing, type ValidatedImage, type ValidatedVideo } from "@/lib/listing";
 import type { RenderType } from "@/lib/taxonomy";
 import { canRenderProcedurally } from "@/lib/visual";
-import type { ImageChecker } from "./imageCheck";
+import type { ImageChecker, VideoChecker } from "./imageCheck";
 import type { SourceAdapter, SourceConfig } from "./types";
 
 export type IngestOutcome = "accepted" | "fell_back_procedural" | "rejected";
@@ -11,6 +11,8 @@ export type ProcessedListing =
       outcome: "accepted" | "fell_back_procedural";
       listing: NormalizedListing;
       images: ValidatedImage[];
+      /** Extra media (never the required visual). */
+      videos: ValidatedVideo[];
       renderType: RenderType;
       reason: string | null;
       imageFailures: { url: string; reason: string }[];
@@ -70,6 +72,7 @@ export async function processListing(
   config: SourceConfig,
   checkImage: ImageChecker,
   throttle: () => Promise<void> = async () => {},
+  checkVideo?: VideoChecker,
 ): Promise<ProcessedListing> {
   const rawExternalId = typeof raw.externalId === "string" ? raw.externalId : null;
   let normalizedInput: unknown;
@@ -110,11 +113,30 @@ export async function processListing(
     }
   }
 
+  // Videos: optional extras. Trusted if a recent import checked them, otherwise checked now (if a checker
+  // was given), otherwise left out.
+  const videos: ValidatedVideo[] = [];
+  for (const v of listing.videos.slice(0, 2)) {
+    const days = config.imagePolicy.trustValidatedWithinDays;
+    const fresh = days && v.validatedAt ? (Date.now() - Date.parse(v.validatedAt)) / 86_400_000 <= days : false;
+    if (!fresh) {
+      if (!checkVideo || !config.imagePolicy.validate) continue;
+      await throttle();
+      const res = await checkVideo(v.url);
+      if (!res.ok) {
+        imageFailures.push({ url: v.url, reason: `video: ${res.reason}` });
+        continue;
+      }
+    }
+    videos.push({ url: v.url, posterUrl: v.posterUrl ?? null, width: v.width ?? null, height: v.height ?? null });
+  }
+
   if (images.length > 0) {
     return {
       outcome: "accepted",
       listing,
       images,
+      videos,
       renderType: renderTypeFor(images),
       reason: imageFailures.length ? `${imageFailures.length} image(s) dropped` : null,
       imageFailures,
@@ -126,6 +148,7 @@ export async function processListing(
       outcome: "fell_back_procedural",
       listing,
       images: [],
+      videos,
       renderType: "procedural",
       reason: candidates.length === 0 ? "no images provided" : "all images failed validation",
       imageFailures,

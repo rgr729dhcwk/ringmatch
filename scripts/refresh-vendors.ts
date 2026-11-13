@@ -7,7 +7,7 @@
  */
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { createImageChecker } from "../src/sources/imageCheck";
+import { createImageChecker, createVideoChecker } from "../src/sources/imageCheck";
 import { createRateLimiter, processListing } from "../src/sources/ingest";
 import { fetchVendorListings, USER_AGENT } from "../src/sources/shopify";
 import { getSourceConfig } from "../src/sources/sources.config";
@@ -18,23 +18,34 @@ async function main() {
   const only = process.argv.slice(2);
   for (const vendor of VENDORS.filter((v) => !only.length || only.includes(v.id))) {
     const cfg = { ...getSourceConfig(vendor.id), imagePolicy: { ...getSourceConfig(vendor.id).imagePolicy, trustValidatedWithinDays: 0 } };
-    const raws = await fetchVendorListings(vendor, { log: console.log });
+    const raws = await fetchVendorListings(vendor, { log: console.log, withVideos: true });
     const politeFetch: typeof fetch = (url, init) => fetch(url, { ...init, headers: { ...(init?.headers ?? {}), "user-agent": USER_AGENT } });
     const checker = createImageChecker({ minLongestSide: cfg.imagePolicy.minLongestSide, fetchImpl: politeFetch });
+    const videoChecker = createVideoChecker({ fetchImpl: politeFetch });
     const throttle = createRateLimiter(3);
     const now = new Date().toISOString();
     const listings: Record<string, unknown>[] = [];
     const counts = { accepted: 0, fell_back_procedural: 0, rejected: 0 };
     for (const raw of raws) {
-      const p = await processListing(raw, { normalize: vendorNormalize(vendor) }, cfg, checker, throttle);
+      const p = await processListing(raw, { normalize: vendorNormalize(vendor) }, cfg, checker, throttle, videoChecker);
       counts[p.outcome]++;
       if (p.outcome === "rejected") {
         console.log(`  rejected ${raw.title}: ${p.reason}`);
         continue;
       }
       for (const f of p.imageFailures) console.log(`  photo skipped (${f.reason}): ${f.url}`);
-      const { sourceId: _s, retailer: _r, attribution: _a, isSample: _i, priceIsEstimate: _p, images: _img, ...rest } = p.listing;
-      listings.push({ ...rest, images: p.images.map((im) => ({ ...im, validatedAt: now })) });
+      const { sourceId: _s, retailer: _r, attribution: _a, isSample: _i, priceIsEstimate: _p, images: _img, videos: _v, ...rest } = p.listing;
+      listings.push({
+        ...rest,
+        images: p.images.map((im) => ({ ...im, validatedAt: now })),
+        videos: p.videos.map((v) => ({
+          url: v.url,
+          ...(v.posterUrl ? { posterUrl: v.posterUrl } : {}),
+          ...(v.width ? { width: v.width } : {}),
+          ...(v.height ? { height: v.height } : {}),
+          validatedAt: now,
+        })),
+      });
     }
     const file = snapshotFile(vendor.id);
     await mkdir(path.dirname(file), { recursive: true });
@@ -46,7 +57,8 @@ async function main() {
     console.log(
       `[${vendor.id}] saved ${listings.length} (photos ok ${counts.accepted}, 3D only ${counts.fell_back_procedural}, rejected ${counts.rejected}). ` +
         `Details found — shape ${known("shape")}, setting ${known("setting")}, metal ${known("metal")}, carat ${known("caratWeight")}, ` +
-        `colour ${known("color")}, clarity ${known("clarity")}, price ${known("price")}`,
+        `colour ${known("color")}, clarity ${known("clarity")}, price ${known("price")}, ` +
+        `videos ${listings.filter((l) => (l.videos as unknown[]).length > 0).length}`,
     );
   }
 }

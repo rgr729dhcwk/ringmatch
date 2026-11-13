@@ -15,7 +15,7 @@ export async function getDeckForUser(
   opts: { includeSeen?: boolean; exclude?: string[] } = {},
 ): Promise<DeckResult> {
   const [rows, signals] = await Promise.all([
-    db.listing.findMany({ where: { active: true }, include: { images: { orderBy: { position: "asc" } } } }),
+    db.listing.findMany({ where: { active: true }, include: { images: { orderBy: { position: "asc" } }, videos: { orderBy: { position: "asc" } } } }),
     loadSignals(userId),
   ]);
   const seen = opts.includeSeen ? new Set<string>() : new Set(effectiveInteractions(signals.events).map((e) => e.listingId));

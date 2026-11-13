@@ -14,7 +14,7 @@ const ProceduralRing = dynamic(() => import("@/components/ring3d/ProceduralRing"
  * The visual area of a card. Every card has one: validated photos, or a procedural render.
  * Only the top card mounts a live WebGL canvas; cards underneath show a lightweight sketch.
  */
-export function CardVisual({ visual, title, live }: { visual: Visual; title: string; live: boolean }) {
+export function CardVisual({ visual, title, live, hasVideo = false }: { visual: Visual; title: string; live: boolean; hasVideo?: boolean }) {
   const [rendered, setRendered] = useState<false | "image" | "webgl" | "svg">(false);
   const [imgIdx, setImgIdx] = useState(0);
   const onReady = useCallback((m: "webgl" | "svg") => setRendered(m), []);
@@ -36,11 +36,18 @@ export function CardVisual({ visual, title, live }: { visual: Visual; title: str
           className="h-full w-full select-none object-cover"
           data-testid="card-image"
         />
-        {visual.images.length > 1 && (
-          <span className="absolute right-2 top-2 rounded-full bg-black/55 px-2 py-0.5 text-[11px] font-medium text-white" data-testid="photo-count">
-            {visual.images.length} photos
-          </span>
-        )}
+        <div className="absolute right-2 top-2 flex gap-1">
+          {hasVideo && (
+            <span className="rounded-full bg-black/55 px-2 py-0.5 text-[11px] font-medium text-white" data-testid="video-chip">
+              ▶ video
+            </span>
+          )}
+          {visual.images.length > 1 && (
+            <span className="rounded-full bg-black/55 px-2 py-0.5 text-[11px] font-medium text-white" data-testid="photo-count">
+              {visual.images.length} photos
+            </span>
+          )}
+        </div>
         {img.kind !== "photo" && (
           <span className="absolute bottom-2 left-2 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-medium text-white">
             {img.kind === "360" ? "360° view" : "CAD render"}

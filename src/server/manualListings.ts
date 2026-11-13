@@ -45,7 +45,7 @@ export async function listManualListings() {
 }
 
 export async function getManualListing(id: string) {
-  return db.listing.findFirst({ where: { id, sourceId: MANUAL_SOURCE_ID }, include: { images: { orderBy: { position: "asc" } } } });
+  return db.listing.findFirst({ where: { id, sourceId: MANUAL_SOURCE_ID }, include: { images: { orderBy: { position: "asc" } }, videos: { orderBy: { position: "asc" } } } });
 }
 
 export async function setManualActive(id: string, active: boolean) {
@@ -64,7 +64,7 @@ export async function exportManualListings(): Promise<{ $comment: string; listin
   const rows = await db.listing.findMany({
     where: { sourceId: MANUAL_SOURCE_ID, active: true },
     orderBy: { createdAt: "asc" },
-    include: { images: { orderBy: { position: "asc" } } },
+    include: { images: { orderBy: { position: "asc" } }, videos: { orderBy: { position: "asc" } } },
   });
   return {
     $comment: "Real listings added on /admin and exported. Loaded on every start (source: manual).",

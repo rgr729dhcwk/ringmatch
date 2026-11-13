@@ -10,7 +10,7 @@ import { ACTION_META } from "./actions";
 
 const ProceduralRing = dynamic(() => import("@/components/ring3d/ProceduralRing"), { ssr: false, loading: () => null });
 
-type Tab = "photos" | "3d";
+type Tab = "photos" | "video" | "3d";
 
 /**
  * Tap a card → this detail view: browse every photo, spin/zoom the 3D ring, read all the details,
@@ -20,7 +20,9 @@ type Tab = "photos" | "3d";
 export function CardDetail({ card, onClose, onAction }: { card: Card; onClose: () => void; onAction: (a: SwipeAction) => void }) {
   const photos = card.visual.kind === "image" ? card.visual.images : [];
   const params: ProceduralParams | null = card.visual.kind === "procedural" ? card.visual.params : (card.preview3d ?? null);
-  const [tab, setTab] = useState<Tab>(photos.length ? "photos" : "3d");
+  const videos = card.videos ?? [];
+  const tabs: Tab[] = [...(photos.length ? (["photos"] as const) : []), ...(videos.length ? (["video"] as const) : []), ...(params ? (["3d"] as const) : [])];
+  const [tab, setTab] = useState<Tab>(tabs[0] ?? "3d");
   const [photo, setPhoto] = useState(0);
   const [rendered, setRendered] = useState<false | "webgl" | "svg">(false);
   const strip = useRef<HTMLDivElement>(null);
@@ -82,9 +84,9 @@ export function CardDetail({ card, onClose, onAction }: { card: Card; onClose: (
       </header>
 
       <div className="min-h-0 flex-1 overflow-y-auto pb-28">
-        {photos.length > 0 && params && (
+        {tabs.length > 1 && (
           <div className="mx-3 mb-2 flex rounded-full bg-surface p-1 text-sm font-semibold shadow-card" role="tablist">
-            {(["photos", "3d"] as const).map((t) => (
+            {tabs.map((t) => (
               <button
                 key={t}
                 type="button"
@@ -94,7 +96,7 @@ export function CardDetail({ card, onClose, onAction }: { card: Card; onClose: (
                 className={`flex-1 rounded-full py-1.5 ${tab === t ? "bg-accent text-white" : "text-ink-soft"}`}
                 data-testid={`detail-tab-${t}`}
               >
-                {t === "photos" ? `Photos (${photos.length})` : "3D view"}
+                {t === "photos" ? `Photos (${photos.length})` : t === "video" ? "▶ Video" : "3D view"}
               </button>
             ))}
           </div>
@@ -152,6 +154,25 @@ export function CardDetail({ card, onClose, onAction }: { card: Card; onClose: (
                 </>
               )}
             </>
+          ) : tab === "video" && videos[0] ? (
+            <div className="relative h-full w-full bg-white" data-testid="detail-video">
+              <video
+                key={videos[0].url}
+                src={videos[0].url}
+                poster={videos[0].posterUrl ?? undefined}
+                className="h-full w-full object-contain"
+                controls
+                playsInline
+                muted
+                autoPlay
+                loop
+                preload="metadata"
+                aria-label={`${card.title} — video from ${card.retailer}`}
+              />
+              <span className="pointer-events-none absolute left-2 top-2 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-medium text-white">
+                Video: {card.retailer}
+              </span>
+            </div>
           ) : params ? (
             <div className="relative h-full w-full" data-testid="detail-3d" data-rendered={rendered ? "true" : "false"} data-render-mode={rendered || undefined}>
               {rendered !== "webgl" && rendered !== "svg" && (

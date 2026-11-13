@@ -28,6 +28,7 @@ export type ListingRow = {
   bandStyle: string | null;
   bandProfile: string | null;
   images: { url: string; kind: string; width: number; height: number; position: number }[];
+  videos?: { url: string; posterUrl: string | null; width: number | null; height: number | null; position: number }[];
 };
 
 export type CardSpec = { label: string; value: string };
@@ -44,6 +45,8 @@ export type Card = {
   specs: CardSpec[];
   /** REQUIRED. A card without a visual cannot be constructed. */
   visual: Visual;
+  /** Retailer videos (turntable spins etc.), shown in the detail view. Extra media, never the visual. */
+  videos: { url: string; posterUrl: string | null }[];
   /**
    * For photo cards whose details are known well enough (shape or setting): an illustrative 3D
    * preview offered in the detail view. Procedural cards don't need it (their visual is the 3D ring).
@@ -109,6 +112,7 @@ export function toCard(row: ListingRow): Card | null {
     price: row.price != null ? { amount: row.price, currency: row.currency, isEstimate: row.priceIsEstimate } : null,
     specs,
     visual,
+    videos: [...(row.videos ?? [])].sort((a, b) => a.position - b.position).map((v) => ({ url: v.url, posterUrl: v.posterUrl })),
     ...(visual.kind === "image" && canRenderProcedurally(attrs) ? { preview3d: proceduralParamsFrom(attrs) } : {}),
   };
 }

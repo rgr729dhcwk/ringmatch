@@ -46,6 +46,7 @@ model Listing {
   updatedAt  DateTime @updatedAt
 
   images         ListingImage[]
+  videos         ListingVideo[]
   interactions   Interaction[]
   shortlist      ShortlistOrder[]
   ingestLogs     IngestLog[]
@@ -62,6 +63,21 @@ model ListingImage {
   kind        String // photo | 360 | cad
   width       Int
   height      Int
+  validatedAt DateTime
+  position    Int      @default(0)
+
+  @@index([listingId, position])
+}
+
+/// Retailer videos (e.g. turntable spins). Extra media only — never counts as the card's required visual.
+model ListingVideo {
+  id          String   @id @default(cuid())
+  listingId   String
+  listing     Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  url         String
+  posterUrl   String?
+  width       Int?
+  height      Int?
   validatedAt DateTime
   position    Int      @default(0)
 

@@ -108,3 +108,64 @@ describe("imported retailer snapshots (seed/vendors/*.json)", () => {
     expect(total).toBeGreaterThanOrEqual(45);
   });
 });
+
+describe("retailer videos", async () => {
+  const { pickVideos } = await import("@/sources/shopify");
+  const { checkVideo } = await import("@/sources/imageCheck");
+
+  it("picks the mp4 closest to 720p and keeps the poster", () => {
+    const v = pickVideos([
+      { media_type: "image" },
+      {
+        media_type: "video",
+        preview_image: { src: "//cdn.example/poster.jpg" },
+        sources: [
+          { format: "m3u8", url: "https://cdn.example/v.m3u8", height: 1080 },
+          { format: "mp4", url: "https://cdn.example/v480.mp4", height: 480 },
+          { format: "mp4", url: "https://cdn.example/v1080.mp4", height: 1080 },
+          { format: "mp4", url: "https://cdn.example/v720.mp4", height: 720 },
+        ],
+      },
+      { media_type: "external_video" },
+    ]);
+    expect(v).toEqual([{ url: "https://cdn.example/v720.mp4", posterUrl: "https://cdn.example/poster.jpg", width: undefined, height: 720 }]);
+  });
+
+  it("checks a video: 206/200 with video/* passes; html or 404 fails; offline never fetches", async () => {
+    const { impl, calls } = mockFetch({
+      "https://cdn.example/ok.mp4": { status: 206, contentType: "video/mp4", body: "x" },
+      "https://cdn.example/page.mp4": { contentType: "text/html", body: "<html>" },
+    });
+    expect((await checkVideo("https://cdn.example/ok.mp4", { fetchImpl: impl })).ok).toBe(true);
+    expect(await checkVideo("https://cdn.example/page.mp4", { fetchImpl: impl })).toMatchObject({ ok: false });
+    expect(await checkVideo("https://cdn.example/missing.mp4", { fetchImpl: impl })).toMatchObject({ ok: false, reason: "HTTP 404" });
+    const n = calls.length;
+    expect((await checkVideo("https://cdn.example/ok.mp4", { fetchImpl: impl, offline: true })).ok).toBe(false);
+    expect(calls.length).toBe(n);
+  });
+
+  it("videos are extras: kept when recently checked, dropped otherwise, and never replace the visual", async () => {
+    const cfg = getSourceConfig("ringconcierge");
+    const adapter = { normalize: (r: Record<string, unknown>) => ({ ...r, sourceId: "ringconcierge", retailer: "Ring Concierge", attribution: "x" }) };
+    const offline = createImageChecker({ minLongestSide: 600, offline: true });
+    const recent = new Date().toISOString();
+    const raw = {
+      externalId: "v1",
+      title: "Oval halo",
+      sourceUrl: "https://shop.test/products/v1",
+      shape: "Oval",
+      images: [{ url: "https://cdn.example/a.jpg", kind: "photo", width: 1800, height: 1800, validatedAt: recent }],
+      videos: [
+        { url: "https://cdn.example/fresh.mp4", validatedAt: recent },
+        { url: "https://cdn.example/unchecked.mp4" },
+      ],
+    };
+    const p = await processListing(raw, adapter, cfg, offline);
+    expect(p.outcome).toBe("accepted");
+    if (p.outcome === "rejected") return;
+    expect(p.videos.map((v) => v.url)).toEqual(["https://cdn.example/fresh.mp4"]);
+    // A listing with only a video (no usable photo) still needs the 3D fallback for its visual.
+    const noPhoto = await processListing({ ...raw, images: [] }, adapter, cfg, offline);
+    expect(noPhoto.outcome).toBe("fell_back_procedural");
+  });
+});

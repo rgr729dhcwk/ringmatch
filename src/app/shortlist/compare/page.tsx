@@ -12,7 +12,7 @@ export default async function ComparePage({ searchParams }: { searchParams: Prom
   const user = await getCurrentUser();
   if (!user) redirect("/profiles");
   const ids = [...new Set(((await searchParams).ids ?? "").split(",").filter(Boolean))].slice(0, MAX_COMPARE);
-  const rows = await db.listing.findMany({ where: { id: { in: ids } }, include: { images: { orderBy: { position: "asc" } } } });
+  const rows = await db.listing.findMany({ where: { id: { in: ids } }, include: { images: { orderBy: { position: "asc" } }, videos: { orderBy: { position: "asc" } } } });
   // Cards only via buildDeck() — every column has a guaranteed visual. Keep the order the user picked.
   const byId = new Map(buildDeck(rows).map((c) => [c.id, c]));
   const cards = ids.flatMap((id) => (byId.has(id) ? [byId.get(id)!] : []));

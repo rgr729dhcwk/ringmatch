@@ -14,8 +14,10 @@ export const PROCEDURAL_BADGE = "Style preview — illustrative render";
  */
 const STAND_IN = readFileSync(path.join(process.cwd(), "public", "seed", "cad-oval-pave-rose-gold.jpg"));
 export async function serveShopPhotosLocally(page: Page) {
-  await page.context().route(/^https:\/\/cdn\.shopify\.com\//, (route) =>
-    route.fulfill({ status: 200, contentType: "image/jpeg", body: STAND_IN }),
+  await page.context().route(/^https:\/\/(cdn\.shopify\.com|[a-z0-9.-]+\.myshopify\.com)\//, (route) =>
+    /\.(mp4|m3u8)(\?|$)/.test(route.request().url())
+      ? route.fulfill({ status: 200, contentType: "video/mp4", body: Buffer.alloc(0) })
+      : route.fulfill({ status: 200, contentType: "image/jpeg", body: STAND_IN }),
   );
 }
 

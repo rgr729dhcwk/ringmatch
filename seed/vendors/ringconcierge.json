@@ -1,7 +1,7 @@
 {
   "$comment": "Imported from https://www.ringconcierge.com/products.json by scripts/refresh-vendors.ts. Do not edit by hand.",
   "vendor": "Ring Concierge",
-  "fetchedAt": "2026-11-13T18:59:35.442Z",
+  "fetchedAt": "2026-11-13T19:57:29.337Z",
   "listings": [
     {
       "shape": "Oval",
@@ -28,28 +28,37 @@
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_3_02.jpg?v=1763073538",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_3_03.jpg?v=1763070000",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_3_04.jpg?v=1763059638",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/051c2b98734a4c0abbfede7e97a88694/051c2b98734a4c0abbfede7e97a88694.SD-480p-1.5Mbps-21227163.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/1359/2701/files/preview_images/051c2b98734a4c0abbfede7e97a88694.thumbnail.0000000000.jpg?v=1701100118",
+          "width": 480,
+          "height": 852,
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
       ]
     },
@@ -78,21 +87,30 @@
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_EMERALD_3_02.jpg?v=1763136437",
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_EMERALD_3_03.jpg?v=1763136359",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/7b2ee2ef212046d290c91b7440159d10/7b2ee2ef212046d290c91b7440159d10.SD-480p-1.5Mbps-27315568.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/1359/2701/files/preview_images/7b2ee2ef212046d290c91b7440159d10.thumbnail.0000000000.jpg?v=1713387379",
+          "width": 480,
+          "height": 672,
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
       ]
     },
@@ -121,21 +139,30 @@
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/2025-05-12_19-14-59_B_Radius8_Smoothing4.jpg?v=1749609767",
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_CLOUD-SOLITAIRE-HIDDENHALO_EMERALD_3_03.jpg?v=1763138173",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/d54dcce4337840c096512aabc0e6fb17/d54dcce4337840c096512aabc0e6fb17.SD-480p-1.5Mbps-39167587.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/1359/2701/files/preview_images/d54dcce4337840c096512aabc0e6fb17.thumbnail.0000000000.jpg?v=1733283754",
+          "width": 480,
+          "height": 672,
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
       ]
     },
@@ -164,23 +191,24 @@
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_CLOUD-SOLITAIRE_CUSHION_4_02.jpg?v=1763139279",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_CLOUD-SOLITAIRE_CUSHION_4_03.jpg?v=1763139279",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Marquise",
@@ -207,30 +235,31 @@
           "kind": "photo",
           "width": 1836,
           "height": 2304,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_MARQUISE_3_02.jpg?v=1793978363",
           "kind": "photo",
           "width": 1836,
           "height": 2304,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_MARQUISE_3_03.jpg?v=1793978363",
           "kind": "photo",
           "width": 1856,
           "height": 2304,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_MARQUISE_3_04.jpg?v=1793978363",
           "kind": "photo",
           "width": 1856,
           "height": 2304,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Oval",
@@ -257,30 +286,31 @@
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_THE-EDGE_OVAL_3_02.jpg?v=1793979934",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_THE-EDGE_OVAL_3_03.jpg?v=1793979936",
           "kind": "photo",
           "width": 1824,
           "height": 2304,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_THE-EDGE_OVAL_3_04.jpg?v=1793979936",
           "kind": "photo",
           "width": 1824,
           "height": 2304,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Cushion",
@@ -307,23 +337,24 @@
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_CUSHION_3_02_c10bd3cc-973f-4e85-92f8-608ccd84f19a.jpg?v=1793978017",
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_CUSHION_3_03_47d63ab5-9881-46a5-9f93-f8773b7bcc55.jpg?v=1793978018",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Oval",
@@ -350,23 +381,24 @@
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/products/ring-concierge-lab-grown-engagement-rings-2-23-oval-lab-diamond-ring-30193552064600.jpg?v=1675868978",
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/products/ring-concierge-lab-grown-engagement-rings-2-23-oval-lab-diamond-ring-30191877128280.jpg?v=1675868785",
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Cushion",
@@ -393,23 +425,24 @@
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_3-STONE_CUSHION-WITH-TRAPEZOIDS_4_02.jpg?v=1793978450",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_3-STONE_CUSHION-WITH-TRAPEZOIDS_4_03.jpg?v=1793978450",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Radiant",
@@ -436,44 +469,45 @@
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_RADIANT_3_02_f612e8e3-fecc-4435-ae29-098707897c37.jpg?v=1793978115",
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_RADIANT_3_03_5db5f9b5-c968-4dd2-8a07-abbf7774d9c7.jpg?v=1793978115",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_RADIANT_3_07_1bb1077f-7bcb-4894-9df8-7cda5d66a51f.jpg?v=1793978115",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_RADIANT_3_04_6a9987c8-d211-4228-afe3-42523c592626.jpg?v=1793978115",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_RADIANT_3_06_a24d4e0e-3271-4644-a07b-09266e98a42e.jpg?v=1793978115",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Oval",
@@ -500,37 +534,38 @@
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_5_02_5c998710-1f01-4674-b179-f265e5743e66.jpg?v=1793980217",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_5_03_1896daaf-5825-407d-bb53-fa45ba639b94.jpg?v=1793980218",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_5_04_5cd43cb4-7da9-4883-883c-b53e13e49184.jpg?v=1793980217",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_5_05_46c47ecd-7f52-4d27-b023-eb61130adad9.jpg?v=1793980218",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Round",
@@ -557,23 +592,24 @@
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_PAVE_HIDDEN-HALO_ROUND_3_02.jpg?v=1793828571",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_PAVE_HIDDEN-HALO_ROUND_3_03.jpg?v=1793828571",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Round",
@@ -600,23 +636,24 @@
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_ROUND_3_02_4828e3c9-959d-41fb-baa1-ea25a5ae552e.jpg?v=1793979397",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_ROUND_3_03_407ffe77-ae41-41be-a811-db801e588916.jpg?v=1793979398",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Oval",
@@ -643,37 +680,38 @@
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_4_02_840c4500-7de8-4731-a1bd-df0d71857b61.jpg?v=1793980122",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_4_03_a6384452-93f0-40cf-a2bf-d4d713d1deac.jpg?v=1793980122",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_4_05_0bced2af-1dd1-429d-abaa-2957716739b8.jpg?v=1793980122",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN_HIDDEN-HALO_OVAL_4_04_47825930-6a03-43c1-9efb-fd4aef813178.jpg?v=1793980123",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Oval",
@@ -700,30 +738,31 @@
           "kind": "photo",
           "width": 1800,
           "height": 2260,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_CLOUD-SOLITAIRE_HIDDEN-HALO_OVAL_4_02.jpg?v=1793984504",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_CLOUD-SOLITAIRE_HIDDEN-HALO_OVAL_4_03.jpg?v=1793984505",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_CLOUD-SOLITAIRE_HIDDEN-HALO_OVAL_4_04.jpg?v=1793984505",
           "kind": "photo",
           "width": 1484,
           "height": 1864,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Oval",
@@ -750,30 +789,31 @@
           "kind": "photo",
           "width": 1824,
           "height": 2304,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN-PAVE_HIDDEN-HALO_OVAL_3_02.jpg?v=1793981983",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN-PAVE_HIDDEN-HALO_OVAL_3_04.jpg?v=1793981984",
           "kind": "photo",
           "width": 1824,
           "height": 2336,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_WHISPER-THIN-PAVE_HIDDEN-HALO_OVAL_3_03.jpg?v=1793981984",
           "kind": "photo",
           "width": 1824,
           "height": 2336,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Pear",
@@ -800,35 +840,44 @@
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_Q4-2026_BRIDAL_PAVE-WAVE-PEAR_02.jpg?v=1792167911",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_Q4-2026_BRIDAL_PAVE-WAVE-PEAR_03.jpg?v=1792167910",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_Q4-2026_BRIDAL_PAVE-WAVE-PEAR_04_c3dcca9f-6e57-4f78-bd45-5d382d4f946a.jpg?v=1794259884",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_Q4-2026_BRIDAL_PAVE-WAVE-PEAR_04.jpg?v=1792167910",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/a696a35f283a43f59da7626db4bbcd36/a696a35f283a43f59da7626db4bbcd36.HD-720p-4.5Mbps-98382322.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/1359/2701/files/preview_images/a696a35f283a43f59da7626db4bbcd36.thumbnail.0000000000.jpg?v=1792593423",
+          "width": 572,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
       ]
     },
@@ -857,28 +906,37 @@
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_Q4-2026_BRIDAL_PAVE-NEST-OVAL_02.jpg?v=1792165022",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_Q4-2026_BRIDAL_PAVE-NEST-OVAL_03.jpg?v=1792165022",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/1359/2701/files/RC_Q4-2026_BRIDAL_PAVE-NEST-OVAL_04.jpg?v=1792165006",
           "kind": "photo",
           "width": 1650,
           "height": 2072,
-          "validatedAt": "2026-11-13T18:59:35.442Z"
+          "validatedAt": "2026-11-13T19:57:29.337Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/ee80ff71bc8547349e65de58d5efc39e/ee80ff71bc8547349e65de58d5efc39e.HD-720p-4.5Mbps-98382476.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/1359/2701/files/preview_images/ee80ff71bc8547349e65de58d5efc39e.thumbnail.0000000000.jpg?v=1792593535",
+          "width": 572,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:57:29.337Z"
         }
       ]
     }

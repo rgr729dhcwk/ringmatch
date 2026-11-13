@@ -41,7 +41,7 @@ export async function loadShortlist(userId: string): Promise<Shortlist> {
 
   const listings = await db.listing.findMany({
     where: { id: { in: all.map((e) => e.listingId) } },
-    include: { images: { orderBy: { position: "asc" } } },
+    include: { images: { orderBy: { position: "asc" } }, videos: { orderBy: { position: "asc" } } },
   });
   // Cards only via buildDeck(): anything without a guaranteed visual is left out.
   const cardBy = new Map(buildDeck(listings).map((c) => [c.id, c]));

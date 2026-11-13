@@ -7,6 +7,16 @@ import type { SwipeAction } from "@/lib/taxonomy";
 import { exitVector } from "./actions";
 import { CardVisual } from "./CardVisual";
 
+/** "Tap for photos, video & 3D" — lists what the detail view offers. */
+function tapHint(card: Card): string {
+  const parts: string[] = [];
+  if (card.visual.kind === "image" && card.visual.images.length > 1) parts.push("photos");
+  if (card.videos.length) parts.push("video");
+  if (card.visual.kind === "procedural" || card.preview3d) parts.push("3D");
+  if (!parts.length) return "Tap for details";
+  return `Tap for ${parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(", ")} & ${parts[parts.length - 1]}`}`;
+}
+
 export type SwipeCardHandle = { swipe: (a: SwipeAction) => Promise<void> };
 
 type Props = {
@@ -107,13 +117,13 @@ export const SwipeCard = forwardRef<SwipeCardHandle, Props>(function SwipeCard({
       aria-label={isTop ? card.title : undefined}
     >
       <div className="relative min-h-0 flex-1">
-        <CardVisual visual={card.visual} title={card.title} live={isTop && !paused} />
+        <CardVisual visual={card.visual} title={card.title} live={isTop && !paused} hasVideo={card.videos.length > 0} />
         {isTop && (
           <span
             className="pointer-events-none absolute bottom-2 right-2 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-medium text-white"
             data-testid="tap-hint"
           >
-            Tap for {card.visual.kind === "image" ? `${card.visual.images.length > 1 ? "photos" : "details"}${card.preview3d ? " & 3D" : ""}` : "3D & details"}
+            {tapHint(card)}
           </span>
         )}
         {isTop && (

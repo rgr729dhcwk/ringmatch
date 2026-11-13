@@ -1,7 +1,7 @@
 {
   "$comment": "Imported from https://www.trumpetandhorn.com/products.json by scripts/refresh-vendors.ts. Do not edit by hand.",
   "vendor": "Trumpet & Horn",
-  "fetchedAt": "2026-11-13T19:01:05.996Z",
+  "fetchedAt": "2026-11-13T19:58:27.190Z",
   "listings": [
     {
       "shape": "Old Mine/Old European",
@@ -28,42 +28,51 @@
           "kind": "photo",
           "width": 3500,
           "height": 3500,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4174439.jpg?v=1794074084",
           "kind": "photo",
           "width": 3000,
           "height": 3000,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4140506.jpg?v=1794074084",
           "kind": "photo",
           "width": 3500,
           "height": 3500,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4140507.jpg?v=1794074084",
           "kind": "photo",
           "width": 3500,
           "height": 3500,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4174440.jpg?v=1794074084",
           "kind": "photo",
           "width": 3000,
           "height": 3000,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4140508.jpg?v=1794074084",
           "kind": "photo",
           "width": 3500,
           "height": 3500,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/28566c65ae1d4ba3b210b27d0c540a48/28566c65ae1d4ba3b210b27d0c540a48.HD-720p-4.5Mbps-100398182.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/28566c65ae1d4ba3b210b27d0c540a48.thumbnail.0000000000.jpg?v=1794074111",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -92,42 +101,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4410915.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4398168.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4398169.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4410916.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4398171.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/25ca83faad3d4615baec34e917351611/25ca83faad3d4615baec34e917351611.HD-720p-4.5Mbps-100320698.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/25ca83faad3d4615baec34e917351611.thumbnail.0000000000.jpg?v=1793998404",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -156,42 +174,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4410910.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4398186.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4398187.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4410909.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4398188.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/55f3642e4899438abaf750d75c170187/55f3642e4899438abaf750d75c170187.HD-720p-4.5Mbps-100320696.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/55f3642e4899438abaf750d75c170187.thumbnail.0000000000.jpg?v=1793998419",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -220,42 +247,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4410904.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4398198.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4398199.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4410905.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4398201.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/3ae1fa1d7afd4f76bd52703563c1d44f/3ae1fa1d7afd4f76bd52703563c1d44f.HD-720p-4.5Mbps-100320697.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/3ae1fa1d7afd4f76bd52703563c1d44f.thumbnail.0000000000.jpg?v=1793998341",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -284,42 +320,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4410918.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4398147.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4398148.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4410919.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4398150.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/f2db28645bc446c495e02fb925a0b26a/f2db28645bc446c495e02fb925a0b26a.HD-720p-4.5Mbps-100320699.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/f2db28645bc446c495e02fb925a0b26a.thumbnail.0000000000.jpg?v=1793998337",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -348,42 +393,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4410901.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4398204.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4398205.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4410902.jpg?v=1794046694",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4398206.jpg?v=1794046693",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/1097de36cb474344bc50549755061f9d/1097de36cb474344bc50549755061f9d.HD-720p-4.5Mbps-100320695.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/1097de36cb474344bc50549755061f9d.thumbnail.0000000000.jpg?v=1793998341",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -412,42 +466,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4410911.jpg?v=1794046695",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4398180.jpg?v=1794046695",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4398181.jpg?v=1794046695",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4410912.jpg?v=1794046695",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4398183.jpg?v=1794046695",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/d2e7ddd4d818410dbb3035688dfd9b1c/d2e7ddd4d818410dbb3035688dfd9b1c.HD-720p-4.5Mbps-100320693.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/d2e7ddd4d818410dbb3035688dfd9b1c.thumbnail.0000000000.jpg?v=1793998376",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -476,42 +539,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4410877.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4398312.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4398313.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4410878.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4398314.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/4b8e90ebd6b54a2d93388e0222260599/4b8e90ebd6b54a2d93388e0222260599.HD-720p-4.5Mbps-100320691.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/4b8e90ebd6b54a2d93388e0222260599.thumbnail.0000000000.jpg?v=1793998335",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -540,42 +612,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4410908.jpg?v=1794046696",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4398192.jpg?v=1794046696",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4398193.jpg?v=1794046696",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4410907.jpg?v=1794046696",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4398194.jpg?v=1794046696",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/3c62c7912d2747d0bf181e71f04ec09b/3c62c7912d2747d0bf181e71f04ec09b.HD-720p-4.5Mbps-100320684.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/3c62c7912d2747d0bf181e71f04ec09b.thumbnail.0000000000.jpg?v=1793998335",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -604,42 +685,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371077.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371078.jpg?v=1794046700",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371079.jpg?v=1794046700",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371080.jpg?v=1794046700",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371081.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/433595b55c7a4e549708d6d6b6d0e70e/433595b55c7a4e549708d6d6b6d0e70e.HD-720p-4.5Mbps-100320677.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/433595b55c7a4e549708d6d6b6d0e70e.thumbnail.0000000000.jpg?v=1793998330",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -668,42 +758,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4410843.jpg?v=1794046700",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4398341.jpg?v=1794046700",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4398347.jpg?v=1794046700",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4410844.jpg?v=1794046700",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4398349.jpg?v=1794046700",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/517e3c54539548038201fd7411d20d00/517e3c54539548038201fd7411d20d00.HD-720p-4.5Mbps-100320676.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/517e3c54539548038201fd7411d20d00.thumbnail.0000000000.jpg?v=1793998412",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -732,42 +831,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4410913.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4398174.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4398175.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4410914.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4398177.jpg?v=1794046699",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/5b2fb1b360d845db84f9932bcd082d4a/5b2fb1b360d845db84f9932bcd082d4a.HD-720p-4.5Mbps-100320673.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/5b2fb1b360d845db84f9932bcd082d4a.thumbnail.0000000000.jpg?v=1793998324",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -796,35 +904,44 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39682_4410865.jpg?v=1794046702",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39682_4398321.jpg?v=1794046702",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39682_4398320.jpg?v=1794046702",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39682_4398323.jpg?v=1794046702",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/2e4bb23c05e144f0952031797354e440/2e4bb23c05e144f0952031797354e440.HD-720p-4.5Mbps-100320675.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/2e4bb23c05e144f0952031797354e440.thumbnail.0000000000.jpg?v=1793998375",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -853,42 +970,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4386372.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4371581.jpg?v=1793502126",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4371582.jpg?v=1793502126",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4386373.jpg?v=1793502126",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4371584.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/bdeda0c95a144891a6d94fe599b676c6/bdeda0c95a144891a6d94fe599b676c6.HD-720p-4.5Mbps-99512412.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/bdeda0c95a144891a6d94fe599b676c6.thumbnail.0000000000.jpg?v=1793401580",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -917,42 +1043,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4386367.jpg?v=1793502126",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4371561.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4371563.jpg?v=1793502126",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4386368.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4371564.jpg?v=1793502126",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/616f3e7265ae43c6b8ba631af5939411/616f3e7265ae43c6b8ba631af5939411.HD-720p-4.5Mbps-99512403.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/616f3e7265ae43c6b8ba631af5939411.thumbnail.0000000000.jpg?v=1793401579",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -981,42 +1116,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4386365.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4371526.jpg?v=1793502126",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4371527.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4386366.jpg?v=1793502126",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4371528.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/fe831e1071b44e53b33191f94effd5f5/fe831e1071b44e53b33191f94effd5f5.HD-720p-4.5Mbps-99512405.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/fe831e1071b44e53b33191f94effd5f5.thumbnail.0000000000.jpg?v=1793401579",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1045,42 +1189,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4386350.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4371510.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4371511.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4386351.jpg?v=1793502127",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4371513.jpg?v=1793502126",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/1abbbd4491bb4b08b08334c16d1fde23/1abbbd4491bb4b08b08334c16d1fde23.HD-720p-4.5Mbps-99512409.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/1abbbd4491bb4b08b08334c16d1fde23.thumbnail.0000000000.jpg?v=1793401580",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1109,42 +1262,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371059.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371060.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371061.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371062.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371063.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/0332fa43b3984efa84346af2bb76e2c8/0332fa43b3984efa84346af2bb76e2c8.HD-720p-4.5Mbps-99512379.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/0332fa43b3984efa84346af2bb76e2c8.thumbnail.0000000000.jpg?v=1793401579",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1173,42 +1335,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4386395.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4371721.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4371722.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4386394.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4371725.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/68b4b2d2762f4cabaed745704d0755d5/68b4b2d2762f4cabaed745704d0755d5.HD-720p-4.5Mbps-99512378.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/68b4b2d2762f4cabaed745704d0755d5.thumbnail.0000000000.jpg?v=1793401578",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1237,42 +1408,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4386391.jpg?v=1793502133",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4371700.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4371701.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4386390.jpg?v=1793502133",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4371703.jpg?v=1793502132",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/75ad405b7ede4c15a3e5fb1538e64f5f/75ad405b7ede4c15a3e5fb1538e64f5f.HD-720p-4.5Mbps-99512373.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/75ad405b7ede4c15a3e5fb1538e64f5f.thumbnail.0000000000.jpg?v=1793401572",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1301,44 +1481,45 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4386348.jpg?v=1793502137",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4371500.jpg?v=1793502137",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4371501.jpg?v=1793502137",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4386349.jpg?v=1793502137",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4371502.jpg?v=1793502137",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
-      ]
+      ],
+      "videos": []
     },
     {
       "shape": "Cushion",
@@ -1365,42 +1546,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4386370.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4371573.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4371575.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4386371.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4371576.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/a0dd260afc6a49e29a777e7ab48402c3/a0dd260afc6a49e29a777e7ab48402c3.HD-720p-4.5Mbps-99512360.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/a0dd260afc6a49e29a777e7ab48402c3.thumbnail.0000000000.jpg?v=1793401566",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1429,42 +1619,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4386347.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4371494.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4371496.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4386346.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4371495.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/8b51c3cf2f1d44f1a9abb7ebf335c3a1/8b51c3cf2f1d44f1a9abb7ebf335c3a1.HD-720p-4.5Mbps-99512362.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/8b51c3cf2f1d44f1a9abb7ebf335c3a1.thumbnail.0000000000.jpg?v=1793401571",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1493,42 +1692,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4386386.jpg?v=1793502137",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4371638.jpg?v=1793502137",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4371640.jpg?v=1793502137",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4386385.jpg?v=1793502137",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4371643.jpg?v=1793502137",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/63b2707335cc4555b5d14e3ee6cb95c1/63b2707335cc4555b5d14e3ee6cb95c1.HD-720p-4.5Mbps-99512357.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/63b2707335cc4555b5d14e3ee6cb95c1.thumbnail.0000000000.jpg?v=1793401571",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1557,35 +1765,44 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37386_4371569.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37386_4386369.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37386_4371570.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37386_4371572.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/93ce2bf11b5a40659b3225964e122029/93ce2bf11b5a40659b3225964e122029.HD-720p-4.5Mbps-99512358.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/93ce2bf11b5a40659b3225964e122029.thumbnail.0000000000.jpg?v=1793401571",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1614,42 +1831,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4386352.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4371517.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4371519.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4386353.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4371521.jpg?v=1793502138",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/9952e6943d8e4e07a6ae34aafe274e07/9952e6943d8e4e07a6ae34aafe274e07.HD-720p-4.5Mbps-99512356.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/9952e6943d8e4e07a6ae34aafe274e07.thumbnail.0000000000.jpg?v=1793401566",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1678,42 +1904,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4356159.jpg?v=1792825029",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4346603.jpg?v=1792825029",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4346604.jpg?v=1792825029",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4356160.jpg?v=1792825029",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4346606.jpg?v=1792825029",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/4d4668e05da44c5d8a3e812e2ce9c06c/4d4668e05da44c5d8a3e812e2ce9c06c.HD-720p-4.5Mbps-98691986.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/4d4668e05da44c5d8a3e812e2ce9c06c.thumbnail.0000000000.jpg?v=1792787630",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1742,42 +1977,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4356158.jpg?v=1792825030",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4346597.jpg?v=1792825031",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4346599.jpg?v=1792825030",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4356156.jpg?v=1792825031",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4346600.jpg?v=1792825031",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/03c61ad0b4f94e3890cd6067d12793d7/03c61ad0b4f94e3890cd6067d12793d7.HD-720p-4.5Mbps-98691985.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/03c61ad0b4f94e3890cd6067d12793d7.thumbnail.0000000000.jpg?v=1792787628",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1806,42 +2050,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4356144.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4346566.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4346568.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4356143.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4346569.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/270cfd079e99408f885ca9058dcc49d6/270cfd079e99408f885ca9058dcc49d6.HD-720p-4.5Mbps-98691974.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/270cfd079e99408f885ca9058dcc49d6.thumbnail.0000000000.jpg?v=1792787622",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1870,42 +2123,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4356146.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4346609.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4346610.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4356151.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4346612.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/7ea53ee3b73c4b0e9b46ded5d8456fe0/7ea53ee3b73c4b0e9b46ded5d8456fe0.HD-720p-4.5Mbps-98691977.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/7ea53ee3b73c4b0e9b46ded5d8456fe0.thumbnail.0000000000.jpg?v=1792787622",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1934,42 +2196,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4356118.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4346572.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4346573.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4356119.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4346575.jpg?v=1792825032",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/81a36d91dc9a46f49a037984c7dc1256/81a36d91dc9a46f49a037984c7dc1256.HD-720p-4.5Mbps-98691979.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/81a36d91dc9a46f49a037984c7dc1256.thumbnail.0000000000.jpg?v=1792787628",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     },
@@ -1998,42 +2269,51 @@
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4356152.jpg?v=1792825031",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4346615.jpg?v=1792825031",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4346617.jpg?v=1792825031",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4356153.jpg?v=1792825031",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         },
         {
           "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4346618.jpg?v=1792825031",
           "kind": "photo",
           "width": 2048,
           "height": 2048,
-          "validatedAt": "2026-11-13T19:01:05.996Z"
+          "validatedAt": "2026-11-13T19:58:27.190Z"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://cdn.shopify.com/videos/c/vp/ab66fa6551c8478bbede51d9b2156c6c/ab66fa6551c8478bbede51d9b2156c6c.HD-720p-4.5Mbps-98691975.mp4",
+          "posterUrl": "https://cdn.shopify.com/s/files/1/2428/9807/files/preview_images/ab66fa6551c8478bbede51d9b2156c6c.thumbnail.0000000000.jpg?v=1792787627",
+          "width": 720,
+          "height": 720,
+          "validatedAt": "2026-11-13T19:58:27.190Z"
         }
       ]
     }

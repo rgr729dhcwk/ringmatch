@@ -26,9 +26,13 @@ The plan is approved — follow it, don't re-plan. The user is not a developer; 
   (action weights × recency decay, undo-aware), `score.ts` (stated prefs prior + learned taste), `explore.ts`
   (seeded ~30% exploration), `rank.ts`, `whyLine.ts` (why-lines + taste summary), `labels.ts` (plain-words phrases)
 - `src/server/` db client, cookie session (`rm_uid`), `deck.ts` (ranked deck), `taste.ts` (signals + PreferenceVector cache)
+- `src/lib/shortlist.ts` shortlist rules (pure): love/revisit → tiers top|strong|maybe, lazy ShortlistOrder rows,
+  `removedAt` hides until re-saved, `validateLayout` only accepts a rearrangement. Server: `src/server/shortlist.ts`
+- `src/components/shortlist/` ShortlistBoard (dnd-kit multi-tier sortable + tier menu + keyboard), CompareView
+  (one live WebGL column at a time)
 - `src/lib/prefs.ts` Zod schema for stated prefs (every field defaults to ANY = "show me everything")
 - `src/app/` pages (`/profiles`, `/onboarding`, `/`, `/taste`) + route handlers (`/api/interactions`, `/api/interactions/undo`,
-  `/api/deck`, `/api/taste`, `/api/health`); `/dev/ring?id=` is dev-only
+  `/api/deck`, `/api/taste`, `/api/shortlist` (GET/PUT), `/api/shortlist/remove`, `/api/health`); pages also `/shortlist`, `/shortlist/compare?ids=`; `/dev/ring?id=` is dev-only
 - The deck client re-fetches `/api/deck` every 3 swipes and keeps the two on-screen cards; never show a card twice.
 - `src/components/deck/` SwipeDeck, SwipeCard, ActionBar, CardVisual
 - `src/components/ring3d/` ProceduralRing (r3f), RingSketch (SVG), `geometry/`, `materials.ts`
@@ -49,6 +53,12 @@ npm run typecheck
 
 Hosting for trials: `render.yaml` (Render free plan). `npm run start:render` = db push + seed + start on `$PORT`.
 The Render DB is temporary SQLite (resets on restart) — fine for trials, not for keeping data.
+
+## Testing notes
+- Specs that don't test 3D switch WebGL off (`test.use({ launchOptions: { args: ["--disable-webgl", "--disable-3d-apis"] } })`):
+  the cloud machine renders WebGL in software, which is slow. The sketch fallback is then used.
+- Before starting a server for checks, make sure nothing old is still listening on the port (stale servers
+  serve deleted build chunks → ChunkLoadError).
 
 ## Style
 TypeScript strict (`noUncheckedIndexedAccess` on). Tailwind v4 tokens are in `src/app/globals.css`.

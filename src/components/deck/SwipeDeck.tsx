@@ -6,9 +6,13 @@ import type { Card } from "@/lib/card";
 import type { SwipeAction } from "@/lib/taxonomy";
 import { ActionBar } from "./ActionBar";
 import { actionForKey, type DeckAction } from "./actions";
+import { SHORTLIST_DELTA_EVENT } from "./ShortlistCount";
 import { SwipeCard, type SwipeCardHandle } from "./SwipeCard";
 
 type HistoryEntry = { card: Card; action: SwipeAction; saved: Promise<string | null> };
+
+const savesToShortlist = (a: SwipeAction) => a === "love" || a === "revisit";
+const announceShortlist = (delta: number) => window.dispatchEvent(new CustomEvent(SHORTLIST_DELTA_EVENT, { detail: delta }));
 
 /** Re-rank the upcoming cards after this many swipes (or sooner when the queue runs low). */
 const REFRESH_EVERY = 3;
@@ -103,6 +107,7 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
       setQueue(queueRef.current.slice(1));
       setEnter(null);
       setLastAction(action);
+      if (savesToShortlist(action)) announceShortlist(1);
       animating.current = false;
       sinceRefresh.current++;
       if (sinceRefresh.current >= REFRESH_EVERY && queueRef.current.length > 2) void refresh();
@@ -118,6 +123,7 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
     setQueue([last.card, ...queueRef.current.filter((c) => c.id !== last.card.id)]);
     setEnter({ id: last.card.id, from: last.action });
     setLastAction("undo");
+    if (savesToShortlist(last.action)) announceShortlist(-1);
     void track(
       last.saved.then((id) => {
         if (id) return saveUndo(id);

@@ -2,6 +2,18 @@
 
 A mobile-first "Tinder for engagement rings". Swipe through ring cards to discover your style.
 
+## What's new — Milestone 3
+- **Shortlist**: every ring you tap *Love it* or *Revisit later* on is collected here, in three tiers:
+  **Top picks** (loves start here), **Strong contenders**, and **Maybe** (saved-for-later starts here).
+  The header shows how many you've saved, updating as you swipe.
+- **Reorder by dragging**: drag the ⠿ handle to reorder or move rings between tiers (on a phone, press
+  and hold the handle first). There's also a tier menu on each ring, and keyboard reordering
+  (Space to pick up, arrows to move, Space to drop).
+- **Remove** a ring from the shortlist without it counting as a dislike. Undoing a love on the deck also
+  takes it off.
+- **Compare** 2–3 rings side by side: pictures, price and every spec, with the differences in bold.
+  Tap "View in 3D" to spin one of them.
+
 ## What's new — Milestone 2
 - **A few quick questions to start**: shapes, metal, setting style, centre stone, natural or lab-grown,
   budget and size, plus optional extras (colour, clarity, cut, prongs, band). Every question starts on
@@ -63,5 +75,6 @@ npm run test:e2e    # browser tests on Pixel 7 + desktop Chrome (several minutes
 - `docs/PLAN.md`: approved architecture and milestones
 - `CLAUDE.md`: conventions for contributors and AI sessions
 
-## Coming next (Milestone 3)
-A shortlist of the rings you loved or saved: drag to reorder, sort into tiers, and compare side by side.
+## Coming next (Milestone 4)
+Real ring listings from shops, entered through a simple admin form (no scraping), with each photo
+checked before it's shown.

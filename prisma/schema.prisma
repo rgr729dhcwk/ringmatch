@@ -134,8 +134,10 @@ model ShortlistOrder {
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   listingId String
   listing   Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
-  tier      String   @default("maybe") // e.g. top | maybe (Milestone 3)
+  tier      String   @default("maybe") // top | strong | maybe (src/lib/shortlist.ts)
   rank      Int      @default(0)
+  /// Set when the user removes the ring from the shortlist. A later love/revisit brings it back.
+  removedAt DateTime?
   updatedAt DateTime @updatedAt
 
   @@unique([userId, listingId])

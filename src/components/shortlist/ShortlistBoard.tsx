@@ -89,32 +89,36 @@ export function ShortlistBoard({ initialLayout, cards }: Props) {
     save(next, prev);
   };
 
-  // While dragging over another tier, move the item into it so the list makes room.
+  // While dragging toward another tier, only highlight it. Nothing moves until the drop, so the layout
+  // doesn't shift under the finger (moving mid-drag made the target tier jump away).
+  const [overTier, setOverTier] = useState<TierId | null>(null);
   const onDragOver = ({ active, over }: DragOverEvent) => {
-    if (!over) return;
     const from = findTier(layoutRef.current, String(active.id));
-    const to = findTier(layoutRef.current, String(over.id));
-    if (!from || !to || from === to) return;
-    const overIndex = layoutRef.current[to].indexOf(String(over.id));
-    setLayout(moveItem(layoutRef.current, String(active.id), to, overIndex < 0 ? undefined : overIndex));
+    const to = over ? findTier(layoutRef.current, String(over.id)) : null;
+    setOverTier(to && to !== from ? to : null);
   };
 
   const onDragEnd = ({ active, over }: DragEndEvent) => {
-    const start = beforeDrag.current ?? layoutRef.current;
+    setOverTier(null);
     beforeDrag.current = null;
-    let next = layoutRef.current;
-    if (over) {
-      const tier = findTier(next, String(active.id));
-      const overTier = findTier(next, String(over.id));
-      if (tier && tier === overTier) {
-        const a = next[tier].indexOf(String(active.id));
-        const b = next[tier].indexOf(String(over.id));
-        if (a >= 0 && b >= 0 && a !== b) next = { ...next, [tier]: arrayMove(next[tier], a, b) };
-      }
+    if (!over) return;
+    const cur = layoutRef.current;
+    const id = String(active.id);
+    const from = findTier(cur, id);
+    const to = findTier(cur, String(over.id));
+    if (!from || !to) return;
+    let next = cur;
+    if (from === to) {
+      const a = cur[from].indexOf(id);
+      const b = cur[from].indexOf(String(over.id));
+      if (a >= 0 && b >= 0 && a !== b) next = { ...cur, [from]: arrayMove(cur[from], a, b) };
+    } else {
+      // Dropped on a ring in another tier → take its place; dropped on an empty tier → go in.
+      const idx = cur[to].indexOf(String(over.id));
+      next = moveItem(cur, id, to, idx < 0 ? undefined : idx);
     }
-    if (JSON.stringify(next) === JSON.stringify(start)) return setLayout(start);
-    setLayout(next);
-    save(next, start);
+    if (next === cur) return;
+    commit(next);
   };
 
   const remove = async (id: string) => {
@@ -173,12 +177,12 @@ export function ShortlistBoard({ initialLayout, cards }: Props) {
         onDragOver={onDragOver}
         onDragEnd={onDragEnd}
         onDragCancel={() => {
-          if (beforeDrag.current) setLayout(beforeDrag.current);
+          setOverTier(null);
           beforeDrag.current = null;
         }}
       >
         {SHORTLIST_TIERS.map((tier) => (
-          <TierList key={tier.id} tier={tier.id} label={tier.label} ids={layout[tier.id]}>
+          <TierList key={tier.id} tier={tier.id} label={tier.label} ids={layout[tier.id]} highlight={overTier === tier.id}>
             {layout[tier.id].map((id) => (
               <SortableRow
                 key={id}
@@ -225,10 +229,22 @@ export function ShortlistBoard({ initialLayout, cards }: Props) {
   );
 }
 
-function TierList({ tier, label, ids, children }: { tier: TierId; label: string; ids: string[]; children: React.ReactNode }) {
+function TierList({
+  tier,
+  label,
+  ids,
+  highlight,
+  children,
+}: {
+  tier: TierId;
+  label: string;
+  ids: string[];
+  highlight: boolean;
+  children: React.ReactNode;
+}) {
   const { setNodeRef, isOver } = useDroppable({ id: tier });
   return (
-    <section aria-label={label} data-testid={`tier-${tier}`}>
+    <section aria-label={label} data-testid={`tier-${tier}`} data-drop-target={highlight ? "1" : "0"}>
       <h2 className="mb-2 flex items-baseline justify-between px-1">
         <span className="font-semibold text-ink">{label}</span>
         <span className="text-xs text-ink-soft">{ids.length}</span>
@@ -236,7 +252,7 @@ function TierList({ tier, label, ids, children }: { tier: TierId; label: string;
       <SortableContext id={tier} items={ids} strategy={verticalListSortingStrategy}>
         <ul
           ref={setNodeRef}
-          className={`flex min-h-16 flex-col gap-2 rounded-3xl p-1 transition ${isOver ? "bg-accent/10" : ""} ${ids.length === 0 ? "border-2 border-dashed border-line" : ""}`}
+          className={`flex min-h-16 flex-col gap-2 rounded-3xl p-1 transition ${isOver || highlight ? "bg-accent/10 ring-2 ring-accent/40" : ""} ${ids.length === 0 ? "border-2 border-dashed border-line" : ""}`}
         >
           {children}
           {ids.length === 0 && <li className="py-4 text-center text-xs text-ink-soft">Drag a ring here</li>}

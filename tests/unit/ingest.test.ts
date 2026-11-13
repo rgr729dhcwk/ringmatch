@@ -7,6 +7,7 @@ import { mockFetch, pngHeader } from "./helpers";
 const config: SourceConfig = {
   enabled: true,
   imagePolicy: { validate: true, minLongestSide: 600, maxImages: 8 },
+  deactivateMissing: true,
   rateLimit: { requestsPerSecond: 0 },
   attribution: "test",
 };

@@ -16,3 +16,6 @@ services:
         value: "22"
       - key: DATABASE_URL
         value: file:./render.db
+      # Password for /admin. Render generates a random one; see it under the service's Environment tab.
+      - key: ADMIN_PASSWORD
+        generateValue: true

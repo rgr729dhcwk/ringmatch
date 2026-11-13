@@ -21,11 +21,15 @@ The plan is approved — follow it, don't re-plan. The user is not a developer; 
 
 ## Layout
 - `src/lib/` taxonomy, Zod listing schema, `resolveVisual`, `toCard`
-- `src/sources/` adapters (`seed.adapter.ts`), `registry.ts`, `sources.config.ts`, `ingest.ts`, `imageCheck.ts`, `prismaStore.ts`
+- `src/sources/` adapters (`seed.adapter.ts`, `manual.adapter.ts` = hand-entered real listings, file
+  `seed/manual-listings.json`), `registry.ts`, `sources.config.ts`, `ingest.ts`, `imageCheck.ts`, `prismaStore.ts`
 - `src/recs/` recommender (pure): `features.ts` (attributes → `dim:value` features + weights), `preferenceVector.ts`
   (action weights × recency decay, undo-aware), `score.ts` (stated prefs prior + learned taste), `explore.ts`
   (seeded ~30% exploration), `rank.ts`, `whyLine.ts` (why-lines + taste summary), `labels.ts` (plain-words phrases)
 - `src/server/` db client, cookie session (`rm_uid`), `deck.ts` (ranked deck), `taste.ts` (signals + PreferenceVector cache)
+- Admin (`/admin`, `src/server/admin.ts`, `src/server/manualListings.ts`): one `ADMIN_PASSWORD` env var (8+ chars;
+  admin is off without it); cookie holds an HMAC, never the password. Every save runs `processListing` (same
+  image checks / fallback / IngestLog). `deactivateMissing` is per source (false for manual).
 - `src/lib/shortlist.ts` shortlist rules (pure): love/revisit → tiers top|strong|maybe, lazy ShortlistOrder rows,
   `removedAt` hides until re-saved, `validateLayout` only accepts a rearrangement. Server: `src/server/shortlist.ts`
 - `src/components/shortlist/` ShortlistBoard (dnd-kit multi-tier sortable + tier menu + keyboard), CompareView

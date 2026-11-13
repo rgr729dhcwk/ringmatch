@@ -15,6 +15,11 @@ export type ImagePolicy = {
 export type SourceConfig = {
   enabled: boolean;
   imagePolicy: ImagePolicy;
+  /**
+   * After a full run, retire listings from this source that weren't in the run.
+   * True for file-driven sources (seed); false for sources whose listings also live in the DB (manual).
+   */
+  deactivateMissing: boolean;
   /** Politeness limit for any HTTP the pipeline does on this source's behalf. */
   rateLimit: { requestsPerSecond: number };
   /** Shown on cards; legal/credit text for the data. */

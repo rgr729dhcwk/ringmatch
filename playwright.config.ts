@@ -24,6 +24,6 @@ export default defineConfig({
     url: `http://127.0.0.1:${PORT}/api/health`,
     timeout: 300_000,
     reuseExistingServer: false,
-    env: { DATABASE_URL: "file:./e2e.db", NEXT_DIST_DIR: ".next-e2e", RINGMATCH_OFFLINE: "1" },
+    env: { DATABASE_URL: "file:./e2e.db", NEXT_DIST_DIR: ".next-e2e", RINGMATCH_OFFLINE: "1", ADMIN_PASSWORD: "e2e-admin-password" },
   },
 });

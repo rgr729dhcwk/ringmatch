@@ -169,6 +169,6 @@ export async function ingestSource(
       detail,
     });
   }
-  if (store.deactivateMissing) summary.deactivated = await store.deactivateMissing(adapter.id, seen);
+  if (config.deactivateMissing && store.deactivateMissing) summary.deactivated = await store.deactivateMissing(adapter.id, seen);
   return summary;
 }

@@ -121,6 +121,12 @@ function CardDetails({ card }: { card: Card }) {
           </span>
         )}
       </div>
+      {card.why && (
+        <p className="mt-1 flex items-center gap-1 text-[12px] font-medium text-accent" data-testid="card-why" data-explore={card.explore ? "1" : "0"}>
+          <span aria-hidden>{card.explore ? "🧭" : "✨"}</span>
+          {card.why}
+        </p>
+      )}
       <dl className="mt-2 grid grid-cols-3 gap-x-3 gap-y-1.5 text-[12px]">
         {card.specs.slice(0, 9).map((s) => (
           <div key={s.label} className="min-w-0">

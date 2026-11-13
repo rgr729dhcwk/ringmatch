@@ -2,6 +2,20 @@
 
 A mobile-first "Tinder for engagement rings". Swipe through ring cards to discover your style.
 
+## What's new — Milestone 2
+- **A few quick questions to start**: shapes, metal, setting style, centre stone, natural or lab-grown,
+  budget and size, plus optional extras (colour, clarity, cut, prongs, band). Every question starts on
+  *"Not sure / show me everything"*, and you can skip the whole thing. Change your answers any time
+  under **Preferences**.
+- **The deck learns from your swipes.** Love counts most (+3), then Revisit later (+2), Like (+1), and a
+  pass counts against (−1). Recent swipes count more than old ones. Every few swipes the cards ahead of
+  you are quietly re-ordered, without changing the card you're looking at.
+- **About 3 in 10 cards are deliberately different** (marked 🧭), so you keep discovering styles.
+- **Every card says why it's there**, e.g. "Because you liked oval stones and rose gold" or
+  "Matches what you told us: halo settings".
+- **My taste** page: a plain-words summary of what you're drawn to and what you pass on, your swipe
+  counts, and your onboarding answers.
+
 ## What's new — Milestone 1
 - **Swipe deck**: drag a card right to like it or left to pass, or swipe up for **Love it**. Buttons do the
   same, plus **Revisit later** and **Undo**. On a computer: ← nope, → like, ↑ love, S revisit, Z or
@@ -49,6 +63,5 @@ npm run test:e2e    # browser tests on Pixel 7 + desktop Chrome (several minutes
 - `docs/PLAN.md`: approved architecture and milestones
 - `CLAUDE.md`: conventions for contributors and AI sessions
 
-## Coming next (Milestone 2)
-Onboarding questions ("Not sure / show me everything" allowed everywhere) and smarter ordering that learns
-from your swipes, with a short "why you're seeing this" line and a summary of your taste.
+## Coming next (Milestone 3)
+A shortlist of the rings you loved or saved: drag to reorder, sort into tiers, and compare side by side.

@@ -1,29 +1,50 @@
 import { buildDeck, type Card } from "@/lib/card";
-import { orderDeck } from "@/recs/deckOrder";
 import { effectiveInteractions } from "@/recs/preferenceVector";
+import { rankDeck } from "@/recs/rank";
 import { db } from "./db";
+import { loadSignals } from "./taste";
 
-/** Listing ids the user has already swiped (ignoring undone swipes). */
-export async function seenListingIds(userId: string): Promise<Set<string>> {
-  const rows = await db.interaction.findMany({
-    where: { userId },
-    select: { id: true, action: true, undoesId: true, listingId: true },
-  });
-  return new Set(effectiveInteractions(rows).map((r) => r.listingId));
-}
+export type DeckResult = { cards: Card[]; total: number };
 
-export async function getDeckForUser(userId: string, opts: { includeSeen?: boolean } = {}): Promise<{ cards: Card[]; total: number }> {
-  const rows = await db.listing.findMany({
-    where: { active: true },
-    include: { images: { orderBy: { position: "asc" } } },
-  });
-  const seen = opts.includeSeen ? new Set<string>() : await seenListingIds(userId);
-  const all = buildDeck(rows); // drops anything without a guaranteed visual
-  const unseen = all.filter((c) => !seen.has(c.id));
-  const shapeOf = new Map(rows.map((r) => [r.id, r.shape]));
-  const ordered = orderDeck(
-    unseen.map((c) => ({ ...c, shape: shapeOf.get(c.id) ?? null })),
-    userId,
-  ).map(({ shape: _shape, ...c }) => c as Card);
-  return { cards: ordered, total: all.length };
+/**
+ * The user's deck, best-first: unseen rings (unless includeSeen), scored against stated prefs and
+ * learned taste, with ~30% exploration. Every card goes through buildDeck(), so each has a visual.
+ */
+export async function getDeckForUser(
+  userId: string,
+  opts: { includeSeen?: boolean; exclude?: string[] } = {},
+): Promise<DeckResult> {
+  const [rows, signals] = await Promise.all([
+    db.listing.findMany({ where: { active: true }, include: { images: { orderBy: { position: "asc" } } } }),
+    loadSignals(userId),
+  ]);
+  const seen = opts.includeSeen ? new Set<string>() : new Set(effectiveInteractions(signals.events).map((e) => e.listingId));
+  for (const id of opts.exclude ?? []) seen.add(id);
+
+  const cards = buildDeck(rows); // drops anything without a guaranteed visual
+  const total = cards.length;
+  const rowById = new Map(rows.map((r) => [r.id, r]));
+  const ranked = rankDeck(
+    cards
+      .filter((c) => !seen.has(c.id))
+      .map((c) => {
+        const r = rowById.get(c.id)!;
+        return {
+          id: c.id,
+          item: c,
+          attrs: {
+            shape: r.shape, metal: r.metal, setting: r.setting, prongs: r.prongs, centerStone: r.centerStone,
+            origin: r.origin, color: r.color, clarity: r.clarity, caratWeight: r.caratWeight, price: r.price,
+            bandStyle: r.bandStyle, bandProfile: r.bandProfile,
+          },
+        };
+      }),
+    {
+      prefs: signals.prefs,
+      vector: signals.vector,
+      exploreRate: signals.exploreRate,
+      seed: `${userId}:${signals.interactionCount}`,
+    },
+  );
+  return { cards: ranked.map((r) => ({ ...r.item, why: r.why, explore: r.explore })), total };
 }

@@ -2,11 +2,22 @@ import { expect, type Page } from "@playwright/test";
 
 export const PROCEDURAL_BADGE = "Style preview — illustrative render";
 
-export async function createProfile(page: Page, name = `Tester ${Date.now()}`) {
+/**
+ * Creates a profile and gets through onboarding. With `chips` (data-testids like "chip-shapes-Oval")
+ * those answers are picked and submitted; otherwise onboarding is skipped.
+ */
+export async function createProfile(page: Page, name = `Tester ${Date.now()}`, chips?: string[]) {
   await page.goto("/");
   await expect(page).toHaveURL(/\/profiles/);
   await page.fill("#displayName", name);
   await page.getByRole("button", { name: "Start" }).click();
+  await expect(page.getByTestId("onboarding")).toBeVisible();
+  if (chips) {
+    for (const c of chips) await page.getByTestId(c).click();
+    await page.getByTestId("onboarding-submit").click();
+  } else {
+    await page.getByTestId("onboarding-skip").click();
+  }
   await expect(page.getByTestId("deck")).toBeVisible();
   await expect(page.getByTestId("profile-name")).toHaveText(name);
 }
@@ -44,6 +55,7 @@ export async function expectTopCardVisual(page: Page): Promise<"image" | "proced
 
 export async function waitForSaves(page: Page) {
   await expect(deck(page)).toHaveAttribute("data-pending", "0");
+  await expect(deck(page)).toHaveAttribute("data-refreshing", "0");
 }
 
 type Interaction = { id: string; listingId: string; action: string; undoesId: string | null };

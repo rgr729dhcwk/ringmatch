@@ -58,11 +58,15 @@ Retailer "RingMatch Sample", no link-out (shows "Sample card"), price labeled "e
 market estimate. 40 diverse cards covering all shapes, settings and metals.
 
 ## Milestones
-1. **(this one)** Scaffold; taxonomy/Zod/Prisma; seed adapter + ingest + image checks (unit tests
+Status: Milestone 1 done; Milestone 2 done.
+
+1. Scaffold; taxonomy/Zod/Prisma; seed adapter + ingest + image checks (unit tests
    with mocked HTTP); 40 sample cards; ProceduralRing + badge; swipe deck (drag, swipe-up love,
    5 buttons, undo, keyboard); interactions saved to DB; cookie profile picker; visual-guarantee
    tests (Vitest + Playwright); CLAUDE.md + README.md.
 2. Onboarding + recommendations (preference vector, recency decay, 30% exploration, why-lines, taste summary).
+   Built as: stated prefs are a soft prior (budget is a strong penalty when well over), learned taste is
+   tanh-squashed per feature, recency half-life = 25 swipes, exploration picks from the lower 60% of scores.
 3. Shortlist (dnd-kit reorder, tiers, compare).
 4. Real listings + admin form.
 5. Partner mode (invite code, matches, blend slider, surprise mode).

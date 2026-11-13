@@ -8,7 +8,10 @@ import { ActionBar } from "./ActionBar";
 import { actionForKey, type DeckAction } from "./actions";
 import { SwipeCard, type SwipeCardHandle } from "./SwipeCard";
 
-type HistoryEntry = { index: number; action: SwipeAction; saved: Promise<string | null> };
+type HistoryEntry = { card: Card; action: SwipeAction; saved: Promise<string | null> };
+
+/** Re-rank the upcoming cards after this many swipes (or sooner when the queue runs low). */
+const REFRESH_EVERY = 3;
 
 async function saveInteraction(listingId: string, action: SwipeAction): Promise<string | null> {
   const res = await fetch("/api/interactions", {
@@ -30,22 +33,28 @@ async function saveUndo(interactionId: string) {
   if (!res.ok) throw new Error(`undo failed: ${res.status}`);
 }
 
-export function SwipeDeck({ initialCards, total }: { initialCards: Card[]; total: number }) {
-  const [cards] = useState(initialCards);
-  const [index, setIndex] = useState(0);
-  // History lives in a ref (updated synchronously) so rapid swipes/undos never read stale entries.
+export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: Card[]; total: number; includeSeen: boolean }) {
+  // queue[0] is the top card. Kept in a ref too so rapid input never reads stale state.
+  const [queue, setQueueState] = useState(initialCards);
+  const queueRef = useRef(initialCards);
+  const setQueue = (q: Card[]) => {
+    queueRef.current = q;
+    setQueueState(q);
+  };
   const historyRef = useRef<HistoryEntry[]>([]);
   const [historyLen, setHistoryLen] = useState(0);
-  const indexRef = useRef(0);
   const [enter, setEnter] = useState<{ id: string; from: SwipeAction } | null>(null);
   const [pending, setPending] = useState(0);
+  const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastAction, setLastAction] = useState<DeckAction | null>(null);
   const topRef = useRef<SwipeCardHandle>(null);
   const animating = useRef(false);
+  const sinceRefresh = useRef(0);
+  const refreshSeq = useRef(0);
 
-  const top = cards[index];
-  const next = cards[index + 1];
+  const top = queue[0];
+  const next = queue[1];
 
   const track = useCallback(<T,>(p: Promise<T>) => {
     setPending((n) => n + 1);
@@ -58,21 +67,47 @@ export function SwipeDeck({ initialCards, total }: { initialCards: Card[]; total
       .finally(() => setPending((n) => n - 1));
   }, []);
 
+  /** Ask the server to re-rank what's left, now that it knows about the latest swipes. */
+  const refresh = useCallback(async () => {
+    const seq = ++refreshSeq.current;
+    sinceRefresh.current = 0;
+    setRefreshing(true);
+    try {
+      await Promise.allSettled(historyRef.current.map((h) => h.saved));
+      const swiped = historyRef.current.map((h) => h.card.id);
+      const keepNow = queueRef.current.slice(0, 2).map((c) => c.id);
+      const qs = new URLSearchParams({ exclude: [...swiped, ...keepNow].join(",") });
+      if (includeSeen) qs.set("all", "1");
+      const res = await fetch(`/api/deck?${qs}`);
+      if (!res.ok) throw new Error(`deck refresh failed: ${res.status}`);
+      const data = (await res.json()) as { cards: Card[] };
+      if (seq !== refreshSeq.current) return; // a newer refresh superseded this one
+      // Keep the two cards already on screen; replace everything after them with the new ranking.
+      const kept = queueRef.current.slice(0, 2);
+      const block = new Set([...kept.map((c) => c.id), ...historyRef.current.map((h) => h.card.id)]);
+      setQueue([...kept, ...data.cards.filter((c) => !block.has(c.id))]);
+    } catch (e) {
+      console.error(e); // keep the current order; swiping still works
+    } finally {
+      if (seq === refreshSeq.current) setRefreshing(false);
+    }
+  }, [includeSeen]);
+
   const commit = useCallback(
     (action: SwipeAction) => {
-      const i = indexRef.current;
-      const card = cards[i];
+      const card = queueRef.current[0];
       if (!card) return;
       const saved = track(saveInteraction(card.id, action));
-      historyRef.current = [...historyRef.current, { index: i, action, saved }];
+      historyRef.current = [...historyRef.current, { card, action, saved }];
       setHistoryLen(historyRef.current.length);
-      indexRef.current = i + 1;
+      setQueue(queueRef.current.slice(1));
       setEnter(null);
       setLastAction(action);
-      setIndex(i + 1);
       animating.current = false;
+      sinceRefresh.current++;
+      if (sinceRefresh.current >= REFRESH_EVERY && queueRef.current.length > 2) void refresh();
     },
-    [cards, track],
+    [track, refresh],
   );
 
   const undo = useCallback(() => {
@@ -80,31 +115,29 @@ export function SwipeDeck({ initialCards, total }: { initialCards: Card[]; total
     if (!last || animating.current) return;
     historyRef.current = historyRef.current.slice(0, -1);
     setHistoryLen(historyRef.current.length);
-    indexRef.current = last.index;
-    setIndex(last.index);
-    setEnter({ id: cards[last.index]!.id, from: last.action });
+    setQueue([last.card, ...queueRef.current.filter((c) => c.id !== last.card.id)]);
+    setEnter({ id: last.card.id, from: last.action });
     setLastAction("undo");
     void track(
       last.saved.then((id) => {
         if (id) return saveUndo(id);
       }),
     );
-  }, [cards, track]);
+  }, [track]);
 
   const act = useCallback(
     (a: DeckAction) => {
       if (a === "undo") return undo();
-      if (!top || animating.current) return;
+      if (!queueRef.current[0] || animating.current) return;
       animating.current = true;
       void topRef.current?.swipe(a).catch(() => {
         animating.current = false;
       });
     },
-    [top, undo],
+    [undo],
   );
 
-  // The key listener is attached once and always calls the latest `act`, so a key pressed
-  // right after a swipe never sees stale state (e.g. an undo that ignores the newest swipe).
+  // The key listener is attached once and always calls the latest `act`.
   const actRef = useRef(act);
   useLayoutEffect(() => {
     actRef.current = act;
@@ -124,21 +157,22 @@ export function SwipeDeck({ initialCards, total }: { initialCards: Card[]; total
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const seenCount = total - cards.length + index;
+  const position = Math.min(total - queue.length + 1, total);
 
   return (
     <section
       className="flex min-h-0 flex-1 flex-col"
       data-testid="deck"
-      data-index={index}
-      data-remaining={cards.length - index}
+      data-index={historyLen}
+      data-remaining={queue.length}
       data-pending={pending}
+      data-refreshing={refreshing ? "1" : "0"}
       data-last-action={lastAction ?? ""}
       aria-label="Ring cards"
     >
       <div className="flex items-center justify-between px-1 pb-2 text-xs text-ink-soft">
         <span data-testid="deck-progress">
-          {Math.min(seenCount + (top ? 1 : 0), total)} / {total}
+          {top ? position : total} / {total}
         </span>
         <span className="hidden sm:inline">← nope · → like · ↑ love · S revisit · Z undo</span>
       </div>
@@ -160,10 +194,11 @@ export function SwipeDeck({ initialCards, total }: { initialCards: Card[]; total
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 rounded-[28px] bg-surface p-8 text-center shadow-card" data-testid="deck-empty">
             <div className="text-4xl" aria-hidden>✨</div>
             <h2 className="font-serif text-2xl text-ink">You&apos;ve seen every ring</h2>
-            <p className="text-sm text-ink-soft">
-              More rings and smarter picks arrive in the next update. You can undo your last swipe or go around again.
-            </p>
-            <Link href="/?all=1" className="rounded-xl bg-accent px-5 py-3 font-semibold text-white" prefetch={false}>
+            <p className="text-sm text-ink-soft">Have a look at what your swipes say about your taste, or go around again.</p>
+            <Link href="/taste" className="rounded-xl bg-accent px-5 py-3 font-semibold text-white">
+              See my taste
+            </Link>
+            <Link href="/?all=1" className="text-sm font-semibold text-accent" prefetch={false}>
               Start over
             </Link>
           </div>

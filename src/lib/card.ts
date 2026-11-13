@@ -44,6 +44,10 @@ export type Card = {
   specs: CardSpec[];
   /** REQUIRED. A card without a visual cannot be constructed. */
   visual: Visual;
+  /** "Why you're seeing this" (set by the recommender). */
+  why?: string;
+  /** True when this card is an exploration pick outside the user's current taste. */
+  explore?: boolean;
 };
 
 export function formatPrice(p: NonNullable<Card["price"]>): string {

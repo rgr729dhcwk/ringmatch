@@ -16,7 +16,7 @@ export async function createProfile(formData: FormData) {
     },
   });
   await setCurrentUser(user.id);
-  redirect("/");
+  redirect("/onboarding");
 }
 
 export async function selectProfile(formData: FormData) {

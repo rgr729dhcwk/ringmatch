@@ -173,3 +173,33 @@ export const RENDER_TYPES = ["photo", "360", "cad", "procedural"] as const;
 export type RenderType = (typeof RENDER_TYPES)[number];
 export const IMAGE_KINDS = ["photo", "360", "cad"] as const;
 export type ImageKind = (typeof IMAGE_KINDS)[number];
+
+/** Carat brackets — used for onboarding choices and as learned-taste features. */
+export const CARAT_BANDS = [
+  { id: "under-0.75", label: "Under 0.75 ct", min: 0, max: 0.75 },
+  { id: "0.75-1.25", label: "0.75–1.25 ct", min: 0.75, max: 1.25 },
+  { id: "1.25-2", label: "1.25–2 ct", min: 1.25, max: 2 },
+  { id: "2-3", label: "2–3 ct", min: 2, max: 3 },
+  { id: "3-plus", label: "3 ct and up", min: 3, max: CARAT_BOUNDS.max },
+] as const;
+export type CaratBandId = (typeof CARAT_BANDS)[number]["id"];
+
+/** Budget brackets (USD) — used for onboarding choices and as learned-taste features. */
+export const BUDGET_BANDS = [
+  { id: "under-2k", label: "Under $2,000", min: 0, max: 2_000 },
+  { id: "2k-5k", label: "$2,000–5,000", min: 2_000, max: 5_000 },
+  { id: "5k-10k", label: "$5,000–10,000", min: 5_000, max: 10_000 },
+  { id: "10k-20k", label: "$10,000–20,000", min: 10_000, max: 20_000 },
+  { id: "20k-plus", label: "$20,000 and up", min: 20_000, max: BUDGET_BOUNDS.max },
+] as const;
+export type BudgetBandId = (typeof BUDGET_BANDS)[number]["id"];
+
+export function caratBandOf(carat: number | null | undefined): CaratBandId | null {
+  if (carat == null) return null;
+  return (CARAT_BANDS.find((b) => carat >= b.min && carat < b.max) ?? CARAT_BANDS[CARAT_BANDS.length - 1]!).id;
+}
+
+export function budgetBandOf(price: number | null | undefined): BudgetBandId | null {
+  if (price == null) return null;
+  return (BUDGET_BANDS.find((b) => price >= b.min && price < b.max) ?? BUDGET_BANDS[BUDGET_BANDS.length - 1]!).id;
+}

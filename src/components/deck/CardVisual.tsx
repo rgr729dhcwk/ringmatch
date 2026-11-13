@@ -66,10 +66,16 @@ export function CardVisual({ visual, title, live }: { visual: Visual; title: str
       data-rendered={live ? (rendered ? "true" : "false") : "sketch"}
       data-render-mode={rendered || undefined}
     >
-      {/* The sketch sits underneath so there is never a blank frame while WebGL starts up. */}
-      <div className={`absolute inset-0 p-6 transition-opacity duration-300 ${live && rendered === "webgl" ? "opacity-0" : "opacity-100"}`}>
-        <RingSketch params={visual.params} />
-      </div>
+      {/* A placeholder sketch sits underneath so there is never a blank frame while WebGL starts up.
+          If WebGL is unavailable, ProceduralRing shows the sketch itself, so the placeholder goes away. */}
+      {!(live && rendered === "svg") && (
+        <div
+          className={`absolute inset-0 p-6 transition-opacity duration-300 ${live && rendered === "webgl" ? "opacity-0" : "opacity-100"}`}
+          aria-hidden={live || undefined}
+        >
+          <RingSketch params={visual.params} />
+        </div>
+      )}
       {live && (
         <div className="absolute inset-0">
           <ProceduralRing params={visual.params} onReady={onReady} />

@@ -26,12 +26,16 @@ describe("features", () => {
 });
 
 describe("preference vector", () => {
-  it("applies the brief's weights: dislike −1, like +1, revisit +2, love +3", () => {
-    const v = computePreferenceVector([ev("dislike", { shape: "Pear" }), ev("like", { shape: "Oval" }), ev("revisit", { shape: "Heart" }), ev("love", { shape: "Round" })], 1e9);
+  it("applies the weights: hard no −2, nope −1, like +1, revisit +1.25, love +2", () => {
+    const v = computePreferenceVector(
+      [ev("strong_dislike", { shape: "Marquise" }), ev("dislike", { shape: "Pear" }), ev("like", { shape: "Oval" }), ev("revisit", { shape: "Heart" }), ev("love", { shape: "Round" })],
+      1e9,
+    );
+    expect(v["shape:Marquise"]).toBeCloseTo(-2);
     expect(v["shape:Pear"]).toBeCloseTo(-1);
     expect(v["shape:Oval"]).toBeCloseTo(1);
-    expect(v["shape:Heart"]).toBeCloseTo(2);
-    expect(v["shape:Round"]).toBeCloseTo(3);
+    expect(v["shape:Heart"]).toBeCloseTo(1.25);
+    expect(v["shape:Round"]).toBeCloseTo(2);
   });
 
   it("recent swipes count more than old ones (recency decay)", () => {
@@ -136,7 +140,7 @@ describe("why-lines and taste summary", () => {
     ];
     const s = tasteSummary(computePreferenceVector(evs), evs);
     expect(s.ready).toBe(true);
-    expect(s.counts).toEqual({ love: 2, like: 1, revisit: 0, dislike: 2 });
+    expect(s.counts).toEqual({ love: 2, like: 1, revisit: 0, dislike: 2, strong_dislike: 0 });
     expect(s.text).toContain("oval stones");
     expect(s.text).toContain("rose gold");
     expect(s.text).toContain("Less keen on bezel settings");

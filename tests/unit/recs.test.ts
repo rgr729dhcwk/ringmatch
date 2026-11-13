@@ -21,7 +21,7 @@ describe("recs (Milestone 1 stubs)", () => {
     expect(effectiveInteractions(ev).map((e) => e.id)).toEqual(["1"]);
   });
 
-  it("weights match the brief", () => {
-    expect(ACTION_WEIGHTS).toEqual({ dislike: -1, like: 1, revisit: 2, love: 3 });
+  it("weights: hard no −2, nope −1, like +1, revisit +1.25, love +2", () => {
+    expect(ACTION_WEIGHTS).toEqual({ strong_dislike: -2, dislike: -1, like: 1, revisit: 1.25, love: 2 });
   });
 });

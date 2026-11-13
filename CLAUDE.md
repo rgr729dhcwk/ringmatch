@@ -10,8 +10,10 @@ The plan is approved — follow it, don't re-plan. The user is not a developer; 
   "Style preview — illustrative render" (`PROCEDURAL_BADGE` in `src/lib/visual.ts`).
 - **The taxonomy lives ONLY in `src/lib/taxonomy.ts`.** Never hard-code shapes, settings, metals, prongs,
   colors, clarities etc. anywhere else — import them. Zod schemas (`src/lib/listing.ts`) validate against it.
-- **No scrapers.** Data enters through adapters in `src/sources/` that output normalized listings and go
-  through `ingest.ts` (normalize → image checks → procedural fallback → reject + IngestLog).
+- **No HTML scraping.** Retailer listings come only from public product feeds (Shopify `/products.json`), obeying
+  robots.txt (`src/sources/robots.ts`), identified as RingMatchBot, rate-limited, crediting the retailer and linking
+  to the original listing (user decision after M4; see docs/BRIEF.md). All data enters through adapters in
+  `src/sources/` and `ingest.ts` (normalize → image checks → procedural fallback → reject + IngestLog).
 - **No paid services or API keys** without asking the user first. Secrets only in `.env` (never committed).
 - **Only the top card mounts a WebGL canvas** (browser context limits). Other cards use `RingSketch` (SVG).
 - `src/recs/` is pure: no DB, no React imports.
@@ -22,7 +24,8 @@ The plan is approved — follow it, don't re-plan. The user is not a developer; 
 ## Layout
 - `src/lib/` taxonomy, Zod listing schema, `resolveVisual`, `toCard`
 - `src/sources/` adapters (`seed.adapter.ts`, `manual.adapter.ts` = hand-entered real listings, file
-  `seed/manual-listings.json`), `registry.ts`, `sources.config.ts`, `ingest.ts`, `imageCheck.ts`, `prismaStore.ts`
+  `seed/manual-listings.json`, `vendor.adapter.ts` = retailer snapshots `seed/vendors/<id>.json`), vendors in
+  `vendors.ts`, feed reader `shopify.ts`, attribute extraction `extract.ts`, `registry.ts`, `sources.config.ts`, `ingest.ts`, `imageCheck.ts`, `prismaStore.ts`
 - `src/recs/` recommender (pure): `features.ts` (attributes → `dim:value` features + weights), `preferenceVector.ts`
   (action weights × recency decay, undo-aware), `score.ts` (stated prefs prior + learned taste), `explore.ts`
   (seeded ~30% exploration), `rank.ts`, `whyLine.ts` (why-lines + taste summary), `labels.ts` (plain-words phrases)
@@ -38,7 +41,8 @@ The plan is approved — follow it, don't re-plan. The user is not a developer; 
 - `src/app/` pages (`/profiles`, `/onboarding`, `/`, `/taste`) + route handlers (`/api/interactions`, `/api/interactions/undo`,
   `/api/deck`, `/api/taste`, `/api/shortlist` (GET/PUT), `/api/shortlist/remove`, `/api/health`); pages also `/shortlist`, `/shortlist/compare?ids=`; `/dev/ring?id=` is dev-only
 - The deck client re-fetches `/api/deck` every 3 swipes and keeps the two on-screen cards; never show a card twice.
-- `src/components/deck/` SwipeDeck, SwipeCard, ActionBar, CardVisual
+- `src/components/deck/` SwipeDeck, SwipeCard (own tap detection → detail), ActionBar, CardVisual, CardDetail
+  (gallery + interactive 3D; deck card releases its canvas while open)
 - `src/components/ring3d/` ProceduralRing (r3f), RingSketch (SVG), `geometry/`, `materials.ts`
 - `seed/listings.json` sample data (regenerate with `python3 scripts/generate-seed.py`); images in `public/seed/`
 - `tests/unit/` Vitest, `tests/e2e/` Playwright (Pixel 7 + desktop Chromium)
@@ -53,6 +57,7 @@ npm run dev            # http://0.0.0.0:3000
 npm test               # Vitest unit tests (incl. visual-guarantee tests)
 npm run test:e2e       # Playwright; builds the app into .next-e2e and uses prisma/e2e.db
 npm run typecheck
+npm run vendors:refresh   # re-import retailer listings (network; updates seed/vendors/*.json — commit them)
 ```
 
 Hosting for trials: `render.yaml` (Render free plan). `npm run start:render` = db push + seed + start on `$PORT`.
@@ -61,6 +66,8 @@ The Render DB is temporary SQLite (resets on restart) — fine for trials, not f
 ## Testing notes
 - Specs that don't test 3D switch WebGL off (`test.use({ launchOptions: { args: ["--disable-webgl", "--disable-3d-apis"] } })`):
   the cloud machine renders WebGL in software, which is slow. The sketch fallback is then used.
+- e2e serves Shopify CDN photos from a local stand-in (`serveShopPhotosLocally` in tests/e2e/helpers.ts).
+- `test.use({ launchOptions })` must be top-level in a spec file (so 3D-on and 3D-off tests live in separate files).
 - Before starting a server for checks, make sure nothing old is still listening on the port (stale servers
   serve deleted build chunks → ChunkLoadError).
 

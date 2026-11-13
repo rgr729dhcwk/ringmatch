@@ -93,6 +93,14 @@ export async function processListing(
       imageFailures.push({ url: img.url, reason: "image validation disabled for this source; image not trusted" });
       continue;
     }
+    const days = config.imagePolicy.trustValidatedWithinDays;
+    if (days && img.width && img.height && img.validatedAt) {
+      const age = (Date.now() - Date.parse(img.validatedAt)) / 86_400_000;
+      if (age >= 0 && age <= days && Math.max(img.width, img.height) >= config.imagePolicy.minLongestSide) {
+        images.push({ url: img.url, kind: img.kind, width: img.width, height: img.height });
+        continue;
+      }
+    }
     await throttle();
     const res = await checkImage(img.url, img.kind);
     if (res.ok && Math.max(res.width, res.height) >= config.imagePolicy.minLongestSide) {

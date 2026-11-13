@@ -1,0 +1,2041 @@
+{
+  "$comment": "Imported from https://www.trumpetandhorn.com/products.json by scripts/refresh-vendors.ts. Do not edit by hand.",
+  "vendor": "Trumpet & Horn",
+  "fetchedAt": "2026-11-13T19:01:05.996Z",
+  "listings": [
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "J",
+      "clarity": "VS2",
+      "caratWeight": 0.9,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Bezel",
+      "prongs": null,
+      "metal": "Two-tone",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15506763120962",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/edwardian-gia-diamond-14k-yellow-gold-silver-bezel-set-engagement-ring",
+      "title": "Edwardian GIA diamond 14k yellow gold silver bezel set engagement ring",
+      "price": 4400,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4140503.jpg?v=1794074084",
+          "kind": "photo",
+          "width": 3500,
+          "height": 3500,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4174439.jpg?v=1794074084",
+          "kind": "photo",
+          "width": 3000,
+          "height": 3000,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4140506.jpg?v=1794074084",
+          "kind": "photo",
+          "width": 3500,
+          "height": 3500,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4140507.jpg?v=1794074084",
+          "kind": "photo",
+          "width": 3500,
+          "height": 3500,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4174440.jpg?v=1794074084",
+          "kind": "photo",
+          "width": 3000,
+          "height": 3000,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38682_4140508.jpg?v=1794074084",
+          "kind": "photo",
+          "width": 3500,
+          "height": 3500,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "F",
+      "clarity": "SI2",
+      "caratWeight": 1.51,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Solitaire",
+      "prongs": "Claw",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15504916152642",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/east-west-prong-gia-1-51-carat-old-mine-cut-diamond-18k-yellow-gold-ring",
+      "title": "East West Prong GIA 1.51 carat old mine cut diamond 18k yellow gold ring - T&H Exclusive",
+      "price": 12000,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4398166.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4410915.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4398168.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4398169.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4410916.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37373_4398171.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "F",
+      "clarity": "IF",
+      "caratWeight": 1.01,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Solitaire",
+      "prongs": "Claw",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15504916119874",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/east-west-prong-gia-1-01-carat-flawless-old-mine-cut-diamond-18k-gold-ring",
+      "title": "East West Prong GIA 1.01 carat flawless old mine cut diamond 18k gold ring - T&H Exclusive",
+      "price": 9600,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4398184.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4410910.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4398186.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4398187.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4410909.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37388_4398188.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "H",
+      "clarity": "VS1",
+      "caratWeight": 1.06,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Cluster",
+      "prongs": "Claw",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15504916054338",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/braswell-gia-1-06-carat-old-mine-cut-diamond-18k-yellow-gold-cluster-ring",
+      "title": "Braswell GIA 1.06 carat old mine cut diamond 18k yellow gold cluster ring - T&H Exclusive",
+      "price": 7300,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4398196.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4410904.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4398198.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4398199.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4410905.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37399_4398201.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "F",
+      "clarity": "SI1",
+      "caratWeight": 0.91,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": null,
+      "prongs": "Claw",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15504916021570",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/ara-gia-0-91-carat-old-mine-cut-diamond-18k-gold-east-west-engagement-ring",
+      "title": "Ara GIA 0.91 carat old mine cut diamond 18k gold east west engagement ring",
+      "price": 6000,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4398145.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4410918.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4398147.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4398148.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4410919.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37366_4398150.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "G",
+      "clarity": "I1",
+      "caratWeight": 0.9,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Solitaire",
+      "prongs": "Claw",
+      "metal": "Two-tone",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15504916087106",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/tulum-gia-0-90-carat-old-mine-cut-diamond-18k-yellow-gold-engagement-ring",
+      "title": "Tulum GIA 0.90 carat old mine cut diamond 18k yellow gold engagement ring - T&H Exclusive",
+      "price": 5200,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4398202.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4410901.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4398204.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4398205.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4410902.jpg?v=1794046694",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37401_4398206.jpg?v=1794046693",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "D",
+      "clarity": "VS1",
+      "caratWeight": 0.91,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Solitaire",
+      "prongs": "Claw",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15504915923266",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/myla-gia-0-91-carat-d-vs1-old-mine-cut-diamond-18k-yellow-gold-solitaire-ring",
+      "title": "Myla GIA 0.91 carat D VS1 old mine cut diamond 18k yellow gold solitaire ring - T&H Exclusive",
+      "price": 6200,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4398178.jpg?v=1794046695",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4410911.jpg?v=1794046695",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4398180.jpg?v=1794046695",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4398181.jpg?v=1794046695",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4410912.jpg?v=1794046695",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37383_4398183.jpg?v=1794046695",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": null,
+      "clarity": "I1",
+      "caratWeight": 2.01,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Vintage/Milgrain",
+      "prongs": "Claw",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15504915693890",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/victorian-2-01-carat-old-mine-cut-diamond-18k-yellow-gold-engagement-ring",
+      "title": "Victorian 2.01 carat old mine cut diamond 18k yellow gold engagement ring",
+      "price": 14000,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4398310.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4410877.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4398312.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4398313.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4410878.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39659_4398314.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "F",
+      "clarity": "SI2",
+      "caratWeight": 1.1,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Solitaire",
+      "prongs": "Claw",
+      "metal": "Platinum",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15504915890498",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/east-west-prong-gia-1-10-carat-old-mine-cut-diamond-platinum-engagement-ring",
+      "title": "East West Prong GIA 1.10 carat old mine cut diamond platinum engagement ring - T&H Exclusive",
+      "price": 6400,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4398190.jpg?v=1794046696",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4410908.jpg?v=1794046696",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4398192.jpg?v=1794046696",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4398193.jpg?v=1794046696",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4410907.jpg?v=1794046696",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37389_4398194.jpg?v=1794046696",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "J",
+      "clarity": null,
+      "caratWeight": 0.9,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Vintage/Milgrain",
+      "prongs": "Claw",
+      "metal": "Two-tone",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15504915431746",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/victorian-0-90-carat-old-mine-cut-diamond-18k-yellow-gold-silver-ring",
+      "title": "Victorian 0.90 carat old mine cut diamond 18k yellow gold silver ring",
+      "price": 3000,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371076.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371077.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371078.jpg?v=1794046700",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371079.jpg?v=1794046700",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371080.jpg?v=1794046700",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39553_4371081.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": null,
+      "clarity": "SI1",
+      "caratWeight": 1.8,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Vintage/Milgrain",
+      "prongs": "Claw",
+      "metal": "Platinum",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15504915366210",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/art-deco-1-80-carat-old-mine-cut-diamond-platinum-engagement-ring",
+      "title": "Art Deco 1.80 carat old mine cut diamond platinum engagement ring",
+      "price": 10400,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4398339.jpg?v=1794046700",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4410843.jpg?v=1794046700",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4398341.jpg?v=1794046700",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4398347.jpg?v=1794046700",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4410844.jpg?v=1794046700",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39683_4398349.jpg?v=1794046700",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "E",
+      "clarity": "SI1",
+      "caratWeight": 1.01,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": null,
+      "prongs": "Claw",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15504915497282",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/meridian-gia-1-01-carat-old-mine-cut-diamond-18k-yellow-gold-engagement-ring",
+      "title": "Meridian GIA 1.01 carat old mine cut diamond 18k yellow gold engagement ring - T&H Exclusive",
+      "price": 6800,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4398172.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4410913.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4398174.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4398175.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4410914.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37381_4398177.jpg?v=1794046699",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "I",
+      "clarity": null,
+      "caratWeight": 0.95,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Vintage/Milgrain",
+      "prongs": null,
+      "metal": "Platinum",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15504915300674",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/mid-century-0-95-carat-diamond-platinum-engagement-ring",
+      "title": "Mid Century 0.95 carat diamond platinum engagement ring",
+      "price": 5400,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39682_4398318.jpg?v=1794046702",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39682_4410865.jpg?v=1794046702",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39682_4398321.jpg?v=1794046702",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39682_4398320.jpg?v=1794046702",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39682_4398323.jpg?v=1794046702",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "D",
+      "clarity": "SI2",
+      "caratWeight": 1.09,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": null,
+      "prongs": "Claw",
+      "metal": "Two-tone",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15482956972354",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/bacalar-gia-1-09-old-mine-cut-diamond-18k-gold-and-platinum-engagement-ring",
+      "title": "Bacalar GIA 1.09 old mine cut diamond 18k gold and platinum engagement ring - T&H Exclusive",
+      "price": 6200,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4371579.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4386372.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4371581.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4371582.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4386373.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37390_4371584.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Cushion",
+      "cut": null,
+      "color": "M",
+      "clarity": "SI1",
+      "caratWeight": 1.65,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": null,
+      "prongs": "Claw",
+      "metal": "Two-tone",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15482956939586",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/empire-state-gia-1-65-carat-cushion-cut-diamond-18k-yellow-gold-platinum-ring",
+      "title": "Empire State GIA 1.65 carat cushion cut diamond 18k yellow gold platinum ring - T&H Exclusive",
+      "price": 8400,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4371566.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4386367.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4371561.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4371563.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4386368.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37385_4371564.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "I",
+      "clarity": "SI1",
+      "caratWeight": 1,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Solitaire",
+      "prongs": "Double",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15482956906818",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/astoria-gia-1-00-old-mine-cut-diamond-18k-gold-engagement-ring",
+      "title": "Astoria GIA 1.00 old mine cut diamond 18k gold engagement ring - T&H Exclusive",
+      "price": 5200,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4371529.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4386365.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4371526.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4371527.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4386366.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37382_4371528.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Oval",
+      "cut": null,
+      "color": "I",
+      "clarity": "VVS2",
+      "caratWeight": 0.81,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Bezel",
+      "prongs": null,
+      "metal": "Two-tone",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15482956874050",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/two-tone-bezel-gia-0-81-oval-cut-diamond-18k-yellow-gold-and-platinum-ring",
+      "title": "Two tone bezel GIA 0.81 oval cut diamond 18k yellow gold and platinum ring - T&H Exclusive",
+      "price": 4600,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4371512.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4386350.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4371510.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4371511.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4386351.jpg?v=1793502127",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37376_4371513.jpg?v=1793502126",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "I",
+      "clarity": "VS2",
+      "caratWeight": 2.4,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Vintage/Milgrain",
+      "prongs": null,
+      "metal": "Platinum",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15482956480834",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/art-deco-gia-2-40-carat-old-european-cut-diamond-platinum-engagement-ring-1",
+      "title": "Art Deco GIA 2.40 carat old European cut diamond platinum engagement ring",
+      "price": 21200,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371058.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371059.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371060.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371061.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371062.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39316_4371063.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Round",
+      "cut": null,
+      "color": "H",
+      "clarity": null,
+      "caratWeight": 0.55,
+      "origin": "Natural",
+      "centerStone": "Sapphire",
+      "setting": "Three-Stone",
+      "prongs": null,
+      "metal": "White Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15482956448066",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/italian-mid-century-sapphire-diamond-18k-gold-three-stone-ring",
+      "title": "Italian mid-century sapphire diamond 18k gold three stone ring",
+      "price": 1600,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4371719.jpg?v=1793502133",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4386395.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4371721.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4371722.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4386394.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39497_4371725.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "J",
+      "clarity": null,
+      "caratWeight": 0.3,
+      "origin": "Natural",
+      "centerStone": "Sapphire",
+      "setting": "Vintage/Milgrain",
+      "prongs": null,
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15482956382530",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/austrian-antique-sapphire-diamond-14k-gold-band",
+      "title": "Austrian antique sapphire diamond 14k gold band",
+      "price": 2300,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4371699.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4386391.jpg?v=1793502133",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4371700.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4371701.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4386390.jpg?v=1793502133",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39383_4371703.jpg?v=1793502132",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "J",
+      "clarity": "VS2",
+      "caratWeight": 0.91,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Solitaire",
+      "prongs": "Claw",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15482956022082",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/east-west-prong-gia-0-91-carat-old-mine-cut-diamond-18k-yellow-gold-ring",
+      "title": "East West Prong GIA 0.91 carat old mine cut diamond 18k yellow gold ring - T&H Exclusive",
+      "price": 4900,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4371497.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4386348.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4371500.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4371501.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4386349.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37371_4371502.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Cushion",
+      "cut": null,
+      "color": "E",
+      "clarity": "SI1",
+      "caratWeight": 0.9,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Solitaire",
+      "prongs": "Claw",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15482955923778",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/east-west-prong-gia-0-90-carat-cushion-cut-diamond-18k-gold-engagement-ring",
+      "title": "East West prong GIA 0.90 carat cushion cut diamond 18k gold engagement ring  - T&H Exclusive",
+      "price": 5400,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4371578.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4386370.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4371573.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4371575.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4386371.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37387_4371576.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Cushion",
+      "cut": null,
+      "color": "I",
+      "clarity": "SI1",
+      "caratWeight": 1.37,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Vintage/Milgrain",
+      "prongs": null,
+      "metal": "Two-tone",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15482955858242",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/ophelia-gia-1-37-carat-cushion-cut-diamond-platinum-engagement-ring",
+      "title": "Ophelia GIA 1.37 carat cushion cut diamond platinum engagement ring  - T&H Exclusive",
+      "price": 7800,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4371490.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4386347.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4371494.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4371496.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4386346.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37367_4371495.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "E",
+      "clarity": "SI2",
+      "caratWeight": 0.91,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Bezel",
+      "prongs": null,
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15482955989314",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/brooklyn-gia-0-91-carat-old-mine-cut-diamond-18k-gold-ring",
+      "title": "Brooklyn GIA 0.91 carat old mine cut diamond 18k gold ring - T&H Exclusive",
+      "price": 5500,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4371634.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4386386.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4371638.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4371640.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4386385.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37405_4371643.jpg?v=1793502137",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Cushion",
+      "cut": null,
+      "color": "K",
+      "clarity": "VS2",
+      "caratWeight": 1.26,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Solitaire",
+      "prongs": "Claw",
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15482955956546",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/east-west-prong-gia-1-26-carat-cushion-cut-diamond-18k-yellow-gold-ring",
+      "title": "East West prong GIA 1.26 carat cushion cut diamond 18k yellow gold ring - T&H Exclusive",
+      "price": 6000,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37386_4371567.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37386_4371569.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37386_4386369.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37386_4371570.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37386_4371572.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Cushion",
+      "cut": null,
+      "color": "G",
+      "clarity": "VS1",
+      "caratWeight": 1.01,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Bezel",
+      "prongs": "Claw",
+      "metal": "Two-tone",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15482955891010",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/two-tone-bezel-gia-1-01-cushion-cut-diamond-18k-yellow-gold-and-platinum-ring",
+      "title": "Two tone bezel GIA 1.01 cushion cut diamond 18k yellow gold and platinum ring  - T&H Exclusive",
+      "price": 7000,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4371522.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4386352.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4371517.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4371519.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4386353.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37377_4371521.jpg?v=1793502138",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Round",
+      "cut": null,
+      "color": "G",
+      "clarity": null,
+      "caratWeight": 0.5,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Bezel",
+      "prongs": null,
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15463562576194",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/vintage-round-brilliant-cut-diamond-14k-yellow-gold-bezel-set-ring",
+      "title": "Melrose round brilliant cut diamond 14k yellow gold bezel set ring - T&H Exclusive",
+      "price": 2600,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4346601.jpg?v=1792825029",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4356159.jpg?v=1792825029",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4346603.jpg?v=1792825029",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4346604.jpg?v=1792825029",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4356160.jpg?v=1792825029",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39444_4346606.jpg?v=1792825029",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "J",
+      "clarity": "VS2",
+      "caratWeight": 1.4,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Bezel",
+      "prongs": null,
+      "metal": "Platinum",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15463562543426",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/gia-1-40-carat-old-european-cut-diamond-platinum-half-bezel-set-ring",
+      "title": "Brooklyn GIA 1.40 carat old European cut diamond platinum half bezel set ring - T&H Exclusive",
+      "price": 7600,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4346596.jpg?v=1792825030",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4356158.jpg?v=1792825030",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4346597.jpg?v=1792825031",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4346599.jpg?v=1792825030",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4356156.jpg?v=1792825031",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37407_4346600.jpg?v=1792825031",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "I",
+      "clarity": "SI2",
+      "caratWeight": 1.65,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Vintage/Milgrain",
+      "prongs": "Claw",
+      "metal": "Platinum",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15463562477890",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/art-deco-gia-1-65-carat-old-european-cut-diamond-platinum-engagement-ring",
+      "title": "Art Deco GIA 1.65 carat old European cut diamond platinum engagement ring",
+      "price": 10000,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4346565.jpg?v=1792825031",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4356144.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4346566.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4346568.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4356143.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/39294_4346569.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Cushion",
+      "cut": null,
+      "color": "D",
+      "clarity": "VS2",
+      "caratWeight": 1,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Bezel",
+      "prongs": null,
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15463562445122",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/gia-1-00-carat-diamond-18k-yellow-gold-bezel-set-ring",
+      "title": "Gypset GIA 1.00 carat diamond 18k yellow gold bezel set ring - T&H Exclusive",
+      "price": 8800,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4346607.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4356146.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4346609.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4346610.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4356151.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37393_4346612.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Pear",
+      "cut": null,
+      "color": "G",
+      "clarity": "VS2",
+      "caratWeight": 1.72,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Vintage/Milgrain",
+      "prongs": "Claw",
+      "metal": "White Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": "Tapered",
+      "externalId": "15463562412354",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/french-art-deco-gia-1-72-carat-diamond-18k-white-gold-engagement-ring",
+      "title": "French Art Deco GIA 1.72 carat diamond 18k white gold engagement ring",
+      "price": 14800,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4346570.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4356118.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4346572.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4346573.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4356119.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/38802_4346575.jpg?v=1792825032",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    },
+    {
+      "shape": "Old Mine/Old European",
+      "cut": null,
+      "color": "D",
+      "clarity": "SI2",
+      "caratWeight": 1.01,
+      "origin": "Natural",
+      "centerStone": "Diamond",
+      "setting": "Bezel",
+      "prongs": null,
+      "metal": "Yellow Gold",
+      "bandWidthMm": null,
+      "bandStyle": null,
+      "bandProfile": null,
+      "externalId": "15463562510658",
+      "sourceUrl": "https://www.trumpetandhorn.com/products/gia-1-01-carat-old-mine-cut-diamond-18k-yellow-gold-half-bezel-ring",
+      "title": "Brooklyn GIA 1.01 carat old mine cut diamond 18k yellow gold half bezel ring - T&H Exclusive",
+      "price": 6500,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4346613.jpg?v=1792825031",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4356152.jpg?v=1792825031",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4346615.jpg?v=1792825031",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4346617.jpg?v=1792825031",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4356153.jpg?v=1792825031",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/2428/9807/files/37404_4346618.jpg?v=1792825031",
+          "kind": "photo",
+          "width": 2048,
+          "height": 2048,
+          "validatedAt": "2026-11-13T19:01:05.996Z"
+        }
+      ]
+    }
+  ]
+}

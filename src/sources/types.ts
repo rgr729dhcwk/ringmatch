@@ -10,6 +10,11 @@ export type ImagePolicy = {
   minLongestSide: number;
   /** Max images kept per listing. */
   maxImages: number;
+  /**
+   * Snapshot sources: images checked by the import within this many days are accepted without
+   * fetching them again (keeps app start-up fast and avoids re-downloading shop photos).
+   */
+  trustValidatedWithinDays?: number;
 };
 
 export type SourceConfig = {

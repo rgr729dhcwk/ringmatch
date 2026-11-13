@@ -41,7 +41,19 @@ Every preference field gets a "Not sure / show me everything" default (used in M
 ## Data sources
 Pluggable `src/sources/` layer; every adapter outputs normalized Listing records. Milestone 1:
 only the seed adapter (`seed/listings.json`) plus ~40 attribute-only sample cards using the
-procedural renderer. **No scrapers.**
+procedural renderer. ~~No scrapers.~~
+
+**Updated by the user after Milestone 4:** listings from real retailers should be preloaded
+automatically (link, photos and attributes), starting with 1–2 vendors and ~50 listings. Goal: drive
+traffic *to* existing ring vendors and credit them, not take their business. Guardrails we follow:
+read only public product feeds (e.g. Shopify `/products.json`), never HTML scraping; obey robots.txt;
+identify as RingMatchBot; rate-limit; credit the retailer on every card and link to the original listing;
+hot-link photos from the retailer (no re-hosting). For a public launch: get vendors' permission or use
+affiliate feeds.
+
+**Other revisions after Milestone 4:**
+- Tap a card for a detail view: browse all photos, rotate/zoom the 3D ring, full specs, shop link.
+- New "Hard no" (strongly dislike). Weights: hard no −2, nope −1, like +1, revisit +1.25, love +2.
 
 ## Constraints / decisions
 - Local profiles in a cookie instead of real auth (schema is Auth.js-ready).

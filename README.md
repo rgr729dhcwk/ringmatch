@@ -2,6 +2,18 @@
 
 A mobile-first "Tinder for engagement rings". Swipe through ring cards to discover your style.
 
+## What's new — revisions after Milestone 4
+- **Real rings from real jewellers, loaded automatically**: 50 engagement rings from **Ring Concierge** (modern,
+  lab-grown) and **Trumpet & Horn** (vintage and antique), with their photos, prices and details read from each
+  shop's public product feed. Every card credits the shop and links to the original listing. The importer obeys
+  each site's robots.txt, identifies itself and goes slowly. Refresh with `npm run vendors:refresh`.
+  The made-up sample rings are no longer shown on the live site.
+- **Tap a card for details**: flick through every photo, switch to **3D view** and spin or zoom the ring with your
+  finger, see every detail and the **View at [shop]** button. You can decide (love, like, etc.) from there too.
+  On a computer: Enter opens it, Esc closes it, arrow keys flip photos.
+- **Hard no** button (strongly dislike, key ↓) and gentler scoring: hard no −2, nope −1, like +1,
+  revisit later +1.25, love +2.
+
 ## What's new — Milestone 4
 - **Real ring listings**, entered by hand on a private **admin page** (`/admin`), no scraping. For each ring:
   the shop, the link to its listing, the price, photo addresses (one per line) and its details.

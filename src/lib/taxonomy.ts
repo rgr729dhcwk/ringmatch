@@ -163,7 +163,8 @@ export const DEFAULT_STATED_PREFS: StatedPrefs = {
 /** Shapes that use a lathed (round) brilliant profile in the procedural renderer. */
 export const LATHED_SHAPES: readonly Shape[] = ["Round", "Old Mine/Old European"];
 
-export const SWIPE_ACTIONS = ["dislike", "like", "revisit", "love"] as const;
+/** Swipe actions. "strong_dislike" = the "Hard no" button (strongly dislike). */
+export const SWIPE_ACTIONS = ["strong_dislike", "dislike", "like", "revisit", "love"] as const;
 export type SwipeAction = (typeof SWIPE_ACTIONS)[number];
 export const INTERACTION_ACTIONS = [...SWIPE_ACTIONS, "undo"] as const;
 export type InteractionAction = (typeof INTERACTION_ACTIONS)[number];
@@ -203,3 +204,78 @@ export function budgetBandOf(price: number | null | undefined): BudgetBandId | n
   if (price == null) return null;
   return (BUDGET_BANDS.find((b) => price >= b.min && price < b.max) ?? BUDGET_BANDS[BUDGET_BANDS.length - 1]!).id;
 }
+
+/**
+ * How retailers write taxonomy values in titles, tags and descriptions (lower-case phrases).
+ * Used by the importer (src/sources/extract.ts). Order matters: earlier entries win, so the
+ * more specific phrase comes first (e.g. "Elongated Cushion" before "Cushion", "Hidden Halo" before "Halo").
+ */
+export const TEXT_SYNONYMS = {
+  shape: [
+    ["Old Mine/Old European", ["old mine", "old european", "old euro", "transitional cut", "european cut", "old cut", "antique cushion"]],
+    ["Elongated Cushion", ["elongated cushion"]],
+    ["Cushion", ["cushion"]],
+    ["Oval", ["oval"]],
+    ["Emerald", ["emerald cut", "emerald-cut", "emerald step", "emerald lab diamond", "emerald natural diamond", "emerald diamond"]],
+    ["Asscher", ["asscher"]],
+    ["Princess", ["princess"]],
+    ["Pear", ["pear"]],
+    ["Marquise", ["marquise"]],
+    ["Radiant", ["radiant"]],
+    ["Heart", ["heart shape", "heart-shape", "heart cut", "heart lab diamond", "heart natural diamond", "heart diamond"]],
+    ["Round", ["round brilliant", "round cut", "round lab diamond", "round natural diamond", "round diamond", "round"]],
+  ],
+  setting: [
+    ["Hidden Halo", ["hidden halo"]],
+    ["Halo", ["halo"]],
+    ["Three-Stone", ["three stone", "three-stone", "3 stone", "3-stone", "trilogy"]],
+    ["Toi et Moi", ["toi et moi", "toi-et-moi", "two stone", "two-stone", "2 stone"]],
+    ["Cluster", ["cluster"]],
+    ["Bezel", ["bezel"]],
+    ["Split Shank", ["split shank", "split-shank"]],
+    ["Cathedral", ["cathedral"]],
+    ["Pavé", ["pavé", "pave "]],
+    ["Vintage/Milgrain", ["milgrain", "art deco", "edwardian", "victorian", "georgian", "belle epoque", "filigree", "retro era"]],
+    ["Solitaire", ["solitaire"]],
+  ],
+  metal: [
+    ["Two-tone", ["two tone", "two-tone", "silver on", "silver-topped", "platinum topped", "platinum-topped", "silver top"]],
+    ["Platinum", ["platinum"]],
+    ["Rose Gold", ["rose gold", "pink gold"]],
+    ["White Gold", ["white gold"]],
+    ["Yellow Gold", ["yellow gold", "18k gold", "14k gold", "22k gold", "10k gold", "18 karat gold", "14 karat gold"]],
+  ],
+  prongs: [
+    ["Double", ["double prong", "double claw", "double-prong"]],
+    ["Compass", ["compass", "north-south-east-west", "north south east west"]],
+    ["Claw", ["claw"]],
+    ["6", ["six prong", "6 prong", "6-prong", "six-prong"]],
+    ["4", ["four prong", "4 prong", "4-prong", "four-prong"]],
+  ],
+  centerStone: [
+    ["Sapphire", ["sapphire"]],
+    ["Moissanite", ["moissanite"]],
+    ["Other", ["ruby", "spinel", "morganite", "aquamarine", "garnet", "tourmaline", "opal", "pearl", "emerald ring", "emerald and diamond", "tanzanite", "topaz"]],
+    ["Diamond", ["diamond"]],
+  ],
+  origin: [
+    ["Lab-grown", ["lab grown", "lab-grown", "lab diamond", "lab created", "lab-created"]],
+    ["Natural", ["natural", "gia", "mined", "antique", "vintage", "victorian", "edwardian", "art deco", "old mine", "old european", "georgian", "estate"]],
+  ],
+  cut: [
+    ["Ideal/Excellent", ["excellent cut", "ideal cut", "cut: excellent", "cut: ideal"]],
+    ["Very Good", ["very good cut", "cut: very good"]],
+  ],
+  bandStyle: [["Pavé", ["pavé band", "pave band", "diamond band", "pavé shank", "pave shank"]]],
+  bandProfile: [["Tapered", ["tapered", "tapering"]]],
+} as const satisfies {
+  shape: readonly (readonly [Shape, readonly string[]])[];
+  setting: readonly (readonly [Setting, readonly string[]])[];
+  metal: readonly (readonly [Metal, readonly string[]])[];
+  prongs: readonly (readonly [Prong, readonly string[]])[];
+  centerStone: readonly (readonly [CenterStone, readonly string[]])[];
+  origin: readonly (readonly [Origin, readonly string[]])[];
+  cut: readonly (readonly [Cut, readonly string[]])[];
+  bandStyle: readonly (readonly [BandStyle, readonly string[]])[];
+  bandProfile: readonly (readonly [BandProfile, readonly string[]])[];
+};

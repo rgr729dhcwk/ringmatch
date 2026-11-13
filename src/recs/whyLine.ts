@@ -32,7 +32,7 @@ export const MIN_SWIPES_FOR_SUMMARY = 5;
 export type TasteSummary = {
   ready: boolean;
   swipes: number;
-  counts: { love: number; like: number; revisit: number; dislike: number };
+  counts: { love: number; like: number; revisit: number; dislike: number; strong_dislike: number };
   text: string;
   likes: { dimension: Dimension; phrase: string; strength: number }[];
   dislikes: { dimension: Dimension; phrase: string; strength: number }[];
@@ -45,7 +45,7 @@ export function tasteSummary(
   interactions: { id: string; action: string; undoesId: string | null }[],
 ): TasteSummary {
   const eff = effectiveInteractions(interactions);
-  const counts = { love: 0, like: 0, revisit: 0, dislike: 0 };
+  const counts = { love: 0, like: 0, revisit: 0, dislike: 0, strong_dislike: 0 };
   for (const e of eff) if (e.action in counts) counts[e.action as keyof typeof counts]++;
   const swipes = eff.length;
   const base = { swipes, counts, likes: [], dislikes: [] };

@@ -1,6 +1,6 @@
 import { ListingAttributesSchema } from "./listing";
 import { PRONG_LABELS, type ImageKind, type Prong } from "./taxonomy";
-import { isValidVisual, resolveVisual, type Visual } from "./visual";
+import { canRenderProcedurally, isValidVisual, proceduralParamsFrom, resolveVisual, type ProceduralParams, type Visual } from "./visual";
 
 /** The shape of a listing row as loaded from the DB (structural; no Prisma import here). */
 export type ListingRow = {
@@ -44,6 +44,11 @@ export type Card = {
   specs: CardSpec[];
   /** REQUIRED. A card without a visual cannot be constructed. */
   visual: Visual;
+  /**
+   * For photo cards whose details are known well enough (shape or setting): an illustrative 3D
+   * preview offered in the detail view. Procedural cards don't need it (their visual is the 3D ring).
+   */
+  preview3d?: ProceduralParams;
   /** "Why you're seeing this" (set by the recommender). */
   why?: string;
   /** True when this card is an exploration pick outside the user's current taste. */
@@ -104,6 +109,7 @@ export function toCard(row: ListingRow): Card | null {
     price: row.price != null ? { amount: row.price, currency: row.currency, isEstimate: row.priceIsEstimate } : null,
     specs,
     visual,
+    ...(visual.kind === "image" && canRenderProcedurally(attrs) ? { preview3d: proceduralParamsFrom(attrs) } : {}),
   };
 }
 

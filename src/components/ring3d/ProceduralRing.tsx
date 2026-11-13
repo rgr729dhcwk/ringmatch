@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Lightformer } from "@react-three/drei";
+import { Environment, Lightformer, OrbitControls } from "@react-three/drei";
 import { Component, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import * as THREE from "three";
 import type { ProceduralParams } from "@/lib/visual";
@@ -161,13 +161,15 @@ export type ProceduralRingProps = {
   onReady?: (mode: "webgl" | "svg") => void;
   /** Disable motion (e.g. prefers-reduced-motion). */
   still?: boolean;
+  /** Detail view: drag to rotate, pinch/scroll to zoom (the ring holds still so the user is in control). */
+  interactive?: boolean;
 };
 
 /**
  * Live 3D render of a ring from its attributes. Only mount this for the top card —
  * browsers cap the number of WebGL contexts. Falls back to an SVG sketch if WebGL fails.
  */
-export default function ProceduralRing({ params, onReady, still }: ProceduralRingProps) {
+export default function ProceduralRing({ params, onReady, still, interactive }: ProceduralRingProps) {
   const layout = useMemo(() => layoutRing(params), [params]);
   const [gl, setGl] = useState<"unknown" | "yes" | "no">("unknown");
   useEffect(() => setGl(webglAvailable() ? "yes" : "no"), []);
@@ -195,11 +197,24 @@ export default function ProceduralRing({ params, onReady, still }: ProceduralRin
           renderer.toneMapping = THREE.ACESFilmicToneMapping;
           renderer.toneMappingExposure = 1.05;
         }}
-        style={{ touchAction: "none", pointerEvents: "none" }}
+        // On the deck the canvas ignores pointers so swipes reach the card; in the detail view it takes them.
+        style={{ touchAction: "none", pointerEvents: interactive ? "auto" : "none" }}
         data-testid="ring-canvas"
       >
         <Lights />
-        <Rig onReady={() => onReady?.("webgl")} still={still}>
+        {interactive && (
+          <OrbitControls
+            makeDefault
+            target={[0, 1.2, 0]}
+            enablePan={false}
+            enableDamping
+            minDistance={dist * 0.45}
+            maxDistance={dist * 1.6}
+            autoRotate
+            autoRotateSpeed={0.8}
+          />
+        )}
+        <Rig onReady={() => onReady?.("webgl")} still={still || interactive}>
           <group position={[0, -centerY, 0]}>
             <RingModel params={params} layout={layout} />
           </group>

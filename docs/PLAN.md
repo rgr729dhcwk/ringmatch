@@ -57,8 +57,17 @@ neither is possible, reject and log.
 Retailer "RingMatch Sample", no link-out (shows "Sample card"), price labeled "est." from a typical
 market estimate. 40 diverse cards covering all shapes, settings and metals.
 
+## Post-Milestone-4 revisions
+- Retailer imports: `src/sources/vendors.ts` (Ring Concierge, Trumpet & Horn), `shopify.ts` (robots.txt-aware feed
+  reader), `extract.ts` (attributes from title/tags/description via `TEXT_SYNONYMS` in taxonomy.ts), snapshots in
+  `seed/vendors/<id>.json` written by `npm run vendors:refresh`; images validated at import and trusted for 180 days.
+- Card detail view (`CardDetail`): photo gallery + interactive 3D (`ProceduralRing interactive` = OrbitControls);
+  photo cards carry `preview3d` params; still one WebGL context at a time.
+- Actions: `strong_dislike` added; ACTION_WEIGHTS in `src/recs/weights.ts`.
+- Live site hides the sample rings (`RINGMATCH_SAMPLES=off` in `start:render`).
+
 ## Milestones
-Status: Milestones 1–4 done.
+Status: Milestones 1–4 done, plus post-M4 revisions (detail view, retailer imports, Hard no + new weights).
 
 1. Scaffold; taxonomy/Zod/Prisma; seed adapter + ingest + image checks (unit tests
    with mocked HTTP); 40 sample cards; ProceduralRing + badge; swipe deck (drag, swipe-up love,

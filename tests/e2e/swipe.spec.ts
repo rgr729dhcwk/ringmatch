@@ -36,6 +36,7 @@ test.describe("swiping", () => {
     await dragTopCard(page, 40, 0);
     await page.waitForTimeout(600);
     expect(await topCardId(page)).toBe(a);
+    await expect(page.getByTestId("card-detail")).toHaveCount(0); // a drag is not a tap
     expect(await interactions(page)).toHaveLength(0);
   });
 
@@ -45,6 +46,7 @@ test.describe("swiping", () => {
       ["ArrowLeft", "dislike"],
       ["ArrowRight", "like"],
       ["ArrowUp", "love"],
+      ["ArrowDown", "strong_dislike"],
       ["s", "revisit"],
     ] as const) {
       const id = await topCardId(page);

@@ -7,6 +7,12 @@ const ICONS: Record<DeckAction, React.ReactNode> = {
     <path d="M9 14 4 9l5-5M4 9h10.5a5.5 5.5 0 0 1 0 11H11" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
   ),
   dislike: <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" />,
+  strong_dislike: (
+    <g fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M8.5 8.5l7 7M15.5 8.5l-7 7" />
+    </g>
+  ),
   revisit: <path d="M7 4h10v16l-5-4-5 4z" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />,
   love: (
     <path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z" fill="currentColor" />
@@ -16,7 +22,7 @@ const ICONS: Record<DeckAction, React.ReactNode> = {
   ),
 };
 
-const ORDER: DeckAction[] = ["undo", "dislike", "revisit", "love", "like"];
+const ORDER: DeckAction[] = ["undo", "strong_dislike", "dislike", "revisit", "love", "like"];
 
 export function ActionBar({ onAction, canUndo, disabled }: { onAction: (a: DeckAction) => void; canUndo: boolean; disabled: boolean }) {
   return (
@@ -30,14 +36,14 @@ export function ActionBar({ onAction, canUndo, disabled }: { onAction: (a: DeckA
             key={a}
             type="button"
             data-testid={`action-${a}`}
-            aria-label={`${meta.label} (${meta.key === "Z" ? "Z or Backspace" : meta.key})`}
+            aria-label={`${a === "strong_dislike" ? "Strongly dislike" : meta.label} (${meta.key === "Z" ? "Z or Backspace" : meta.key})`}
             aria-keyshortcuts={a === "undo" ? "Z Backspace" : undefined}
             disabled={isDisabled}
             onClick={() => onAction(a)}
             className="group flex flex-1 flex-col items-center gap-1 disabled:opacity-35"
           >
             <span
-              className={`grid place-items-center rounded-full bg-surface shadow-card transition active:scale-90 ${big ? "h-16 w-16" : "h-12 w-12"}`}
+              className={`grid place-items-center rounded-full bg-surface shadow-card transition active:scale-90 ${big ? "h-[60px] w-[60px]" : "h-11 w-11"}`}
               style={{ color: meta.color }}
             >
               <svg viewBox="0 0 24 24" className={big ? "h-8 w-8" : "h-6 w-6"} aria-hidden>

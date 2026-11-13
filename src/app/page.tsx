@@ -42,7 +42,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ a
       </header>
       <SwipeDeck initialCards={cards} total={total} includeSeen={includeSeen} />
       <p className="sr-only">
-        Keyboard: left arrow dislike, right arrow like, up arrow love, S revisit later, Z or Backspace undo.
+        Keyboard: left arrow nope, down arrow hard no, right arrow like, up arrow love, S revisit later, Z or Backspace undo, Enter for details.
       </p>
     </main>
   );

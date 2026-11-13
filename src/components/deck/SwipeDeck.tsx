@@ -6,6 +6,7 @@ import type { Card } from "@/lib/card";
 import type { SwipeAction } from "@/lib/taxonomy";
 import { ActionBar } from "./ActionBar";
 import { actionForKey, type DeckAction } from "./actions";
+import { CardDetail } from "./CardDetail";
 import { SHORTLIST_DELTA_EVENT } from "./ShortlistCount";
 import { SwipeCard, type SwipeCardHandle } from "./SwipeCard";
 
@@ -52,6 +53,13 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastAction, setLastAction] = useState<DeckAction | null>(null);
+  // The card shown in the detail view (tap a card to open it).
+  const [detail, setDetail] = useState<Card | null>(null);
+  const detailRef = useRef<Card | null>(null);
+  const openDetail = (c: Card | null) => {
+    detailRef.current = c;
+    setDetail(c);
+  };
   const topRef = useRef<SwipeCardHandle>(null);
   const animating = useRef(false);
   const sinceRefresh = useRef(0);
@@ -154,6 +162,13 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
       const t = e.target as HTMLElement | null;
       if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (detailRef.current) return; // the detail view handles its own keys
+      if ((e.key === "Enter" || e.key === "i" || e.key === "I") && queueRef.current[0]) {
+        if (t && (t.tagName === "BUTTON" || t.tagName === "A")) return; // let focused buttons/links work
+        e.preventDefault();
+        openDetail(queueRef.current[0]);
+        return;
+      }
       const a = actionForKey(e);
       if (!a) return;
       e.preventDefault();
@@ -180,7 +195,7 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
         <span data-testid="deck-progress">
           {top ? position : total} / {total}
         </span>
-        <span className="hidden sm:inline">← nope · → like · ↑ love · S revisit · Z undo</span>
+        <span className="hidden sm:inline">← nope · ↓ hard no · → like · ↑ love · S revisit · Z undo · Enter details</span>
       </div>
 
       <div className="relative min-h-0 flex-1">
@@ -194,6 +209,8 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
               isTop
               enterFrom={enter?.id === top.id ? enter.from : null}
               onCommit={commit}
+              onOpen={() => openDetail(top)}
+              paused={detail !== null}
             />
           </>
         ) : (
@@ -218,6 +235,18 @@ export function SwipeDeck({ initialCards, total, includeSeen }: { initialCards: 
       )}
 
       <ActionBar onAction={act} canUndo={historyLen > 0} disabled={!top} />
+
+      {detail && (
+        <CardDetail
+          card={detail}
+          onClose={() => openDetail(null)}
+          onAction={(a) => {
+            openDetail(null);
+            // Let the card come back into view, then send it off in the chosen direction.
+            requestAnimationFrame(() => act(a));
+          }}
+        />
+      )}
     </section>
   );
 }

@@ -31,6 +31,7 @@ const COUNTS = [
   ["Liked", "like", "var(--color-like)"],
   ["Revisit", "revisit", "var(--color-revisit)"],
   ["Passed", "dislike", "var(--color-nope)"],
+  ["Hard no", "strong_dislike", "#8f1d17"],
 ] as const;
 
 export default async function TastePage() {
@@ -54,7 +55,7 @@ export default async function TastePage() {
         <p className="text-lg leading-snug text-ink" data-testid="taste-summary">
           {taste.text}
         </p>
-        <dl className="mt-4 grid grid-cols-4 gap-2 text-center">
+        <dl className="mt-4 grid grid-cols-5 gap-1.5 text-center">
           {COUNTS.map(([label, key, color]) => (
             <div key={key} className="rounded-2xl bg-canvas py-2">
               <dd className="text-xl font-semibold" style={{ color }} data-testid={"count-" + key}>

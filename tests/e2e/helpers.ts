@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { expect, type Page } from "@playwright/test";
 
 export const PROCEDURAL_BADGE = "Style preview — illustrative render";
@@ -6,7 +8,19 @@ export const PROCEDURAL_BADGE = "Style preview — illustrative render";
  * Creates a profile and gets through onboarding. With `chips` (data-testids like "chip-shapes-Oval")
  * those answers are picked and submitted; otherwise onboarding is skipped.
  */
+/**
+ * Retailer photos live on the shops' image servers (Shopify's CDN). Tests serve a local stand-in so
+ * they never depend on someone else's servers; the real app always loads the real photos.
+ */
+const STAND_IN = readFileSync(path.join(process.cwd(), "public", "seed", "cad-oval-pave-rose-gold.jpg"));
+export async function serveShopPhotosLocally(page: Page) {
+  await page.context().route(/^https:\/\/cdn\.shopify\.com\//, (route) =>
+    route.fulfill({ status: 200, contentType: "image/jpeg", body: STAND_IN }),
+  );
+}
+
 export async function createProfile(page: Page, name = `Tester ${Date.now()}`, chips?: string[]) {
+  await serveShopPhotosLocally(page);
   await page.goto("/");
   await expect(page).toHaveURL(/\/profiles/);
   await page.fill("#displayName", name);

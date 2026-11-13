@@ -15,12 +15,16 @@ type Props = {
   /** When re-entering after an undo, the direction it originally left in. */
   enterFrom?: SwipeAction | null;
   onCommit: (a: SwipeAction) => void;
+  /** Tap (no drag) → open the detail view. */
+  onOpen?: () => void;
+  /** Detail view is open: release the live 3D canvas (one WebGL context at a time). */
+  paused?: boolean;
 };
 
 const SWIPE_X = 110;
 const SWIPE_UP = 120;
 
-export const SwipeCard = forwardRef<SwipeCardHandle, Props>(function SwipeCard({ card, isTop, enterFrom, onCommit }, ref) {
+export const SwipeCard = forwardRef<SwipeCardHandle, Props>(function SwipeCard({ card, isTop, enterFrom, onCommit, onOpen, paused }, ref) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rot = useMotionValue(0);
@@ -56,6 +60,23 @@ export const SwipeCard = forwardRef<SwipeCardHandle, Props>(function SwipeCard({
 
   useImperativeHandle(ref, () => ({ swipe: flyOut }));
 
+  // Our own tap detection: a tap is a press that barely moves (< 8px) and lifts quickly.
+  // (The animation library's onTap also fired after short drags.)
+  const press = useRef<{ x: number; y: number; t: number } | null>(null);
+  const onPointerDown = (e: React.PointerEvent) => {
+    press.current = { x: e.clientX, y: e.clientY, t: performance.now() };
+  };
+  const onPointerUp = (e: React.PointerEvent) => {
+    const p = press.current;
+    press.current = null;
+    if (!p || busy.current) return;
+    const moved = Math.hypot(e.clientX - p.x, e.clientY - p.y);
+    if (moved < 8 && performance.now() - p.t < 500 && Math.abs(x.get()) < 8 && Math.abs(y.get()) < 8) {
+      if ((e.target as HTMLElement).closest("a,button")) return; // links/buttons on the card do their own thing
+      onOpen?.();
+    }
+  };
+
   const onDragEnd = (_: unknown, info: PanInfo) => {
     const { offset, velocity } = info;
     if (offset.y < -SWIPE_UP && Math.abs(offset.y) > Math.abs(offset.x)) return void flyOut("love");
@@ -76,6 +97,8 @@ export const SwipeCard = forwardRef<SwipeCardHandle, Props>(function SwipeCard({
       initial={false}
       animate={isTop ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 1 }}
       drag={isTop}
+      onPointerDown={isTop ? onPointerDown : undefined}
+      onPointerUp={isTop ? onPointerUp : undefined}
       dragMomentum={false}
       onDragEnd={isTop ? onDragEnd : undefined}
       data-testid={isTop ? "top-card" : "next-card"}
@@ -84,7 +107,15 @@ export const SwipeCard = forwardRef<SwipeCardHandle, Props>(function SwipeCard({
       aria-label={isTop ? card.title : undefined}
     >
       <div className="relative min-h-0 flex-1">
-        <CardVisual visual={card.visual} title={card.title} live={isTop} />
+        <CardVisual visual={card.visual} title={card.title} live={isTop && !paused} />
+        {isTop && (
+          <span
+            className="pointer-events-none absolute bottom-2 right-2 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-medium text-white"
+            data-testid="tap-hint"
+          >
+            Tap for {card.visual.kind === "image" ? `${card.visual.images.length > 1 ? "photos" : "details"}${card.preview3d ? " & 3D" : ""}` : "3D & details"}
+          </span>
+        )}
         {isTop && (
           <>
             <Stamp text="LIKE" color="var(--color-like)" style={{ opacity: likeOpacity }} className="left-4 -rotate-12" />

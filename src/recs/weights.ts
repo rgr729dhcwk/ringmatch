@@ -1,11 +1,16 @@
 import type { SwipeAction } from "@/lib/taxonomy";
 
-/** Preference-vector weights per action (Milestone 2). */
+/**
+ * How much each swipe counts toward taste (revised after Milestone 4 with the user):
+ * hard no −2, nope −1, like +1, revisit later +1.25 (a bit more than a like), love +2 (about double).
+ * Expect to tune these.
+ */
 export const ACTION_WEIGHTS: Record<SwipeAction, number> = {
+  strong_dislike: -2,
   dislike: -1,
   like: 1,
-  revisit: 2,
-  love: 3,
+  revisit: 1.25,
+  love: 2,
 };
 
 export const DEFAULT_EXPLORE_RATE = 0.3;

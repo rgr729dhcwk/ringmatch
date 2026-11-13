@@ -24,6 +24,10 @@ const opt = <T extends z.ZodTypeAny>(t: T) => t.nullish().transform((v) => v ?? 
 export const ListingImageInputSchema = z.object({
   url: z.string().min(1),
   kind: z.enum(IMAGE_KINDS).default("photo"),
+  /** Set when the image was already checked by an earlier import (snapshot sources). */
+  width: z.number().int().positive().optional(),
+  height: z.number().int().positive().optional(),
+  validatedAt: z.string().datetime().optional(),
 });
 export type ListingImageInput = z.infer<typeof ListingImageInputSchema>;
 

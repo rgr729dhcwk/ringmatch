@@ -37,17 +37,9 @@ export function CardVisual({ visual, title, live }: { visual: Visual; title: str
           data-testid="card-image"
         />
         {visual.images.length > 1 && (
-          <div className="absolute inset-x-0 top-2 flex justify-center gap-1">
-            {visual.images.map((im, i) => (
-              <button
-                key={im.url}
-                type="button"
-                aria-label={`Show image ${i + 1} of ${visual.images.length}`}
-                onClick={() => setImgIdx(i)}
-                className={`h-1.5 w-6 rounded-full ${i === imgIdx % visual.images.length ? "bg-white" : "bg-white/50"}`}
-              />
-            ))}
-          </div>
+          <span className="absolute right-2 top-2 rounded-full bg-black/55 px-2 py-0.5 text-[11px] font-medium text-white" data-testid="photo-count">
+            {visual.images.length} photos
+          </span>
         )}
         {img.kind !== "photo" && (
           <span className="absolute bottom-2 left-2 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-medium text-white">

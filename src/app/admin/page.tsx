@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ImportForm } from "@/components/admin/ImportForm";
 import { formatPrice } from "@/lib/card";
-import { isAdmin, isAdminConfigured } from "@/server/admin";
+import { adminSetupProblem, isAdmin, isAdminConfigured, MIN_ADMIN_PASSWORD } from "@/server/admin";
 import { listManualListings, recentIngestLogs } from "@/server/manualListings";
 import { loginAction, logoutAction, setActiveAction } from "./actions";
 
@@ -15,13 +15,32 @@ const OUTCOME_LABEL: Record<string, string> = {
 
 export default async function AdminPage({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
   if (!isAdminConfigured()) {
+    const problem = adminSetupProblem();
     return (
       <main className="mx-auto max-w-md px-4 py-10">
         <h1 className="font-serif text-3xl text-ink">Admin</h1>
-        <p className="mt-3 rounded-2xl bg-surface p-4 text-sm text-ink shadow-card" data-testid="admin-disabled">
-          The admin area is switched off. To switch it on, set an <code>ADMIN_PASSWORD</code> (at least 8 characters) in the
-          app&apos;s environment settings.
-        </p>
+        <div className="mt-3 flex flex-col gap-2 rounded-2xl bg-surface p-4 text-sm text-ink shadow-card" data-testid="admin-disabled" data-problem={problem?.kind}>
+          <p>The admin area is switched off.</p>
+          {problem?.kind === "too_short" ? (
+            <p data-testid="admin-problem">
+              An <code>ADMIN_PASSWORD</code> setting was found, but it&apos;s only {problem.length} character
+              {problem.length === 1 ? "" : "s"} long. It needs at least {MIN_ADMIN_PASSWORD}. Change it in your hosting
+              settings (on Render: your service → Environment), save, and let the app restart.
+            </p>
+          ) : (
+            <p data-testid="admin-problem">
+              No setting named exactly <code>ADMIN_PASSWORD</code> reached the app. Add it in your hosting settings (on Render:
+              your service → Environment), with a value of at least {MIN_ADMIN_PASSWORD} characters. When saving, choose the option
+              that also deploys/restarts the app.
+            </p>
+          )}
+          {problem && problem.lookalikes.length > 0 && (
+            <p data-testid="admin-lookalikes">
+              There is a similar-looking setting: {problem.lookalikes.map((k) => `“${k}”`).join(", ")}. Rename it to exactly{" "}
+              <code>ADMIN_PASSWORD</code> (capital letters, underscore, no spaces).
+            </p>
+          )}
+        </div>
       </main>
     );
   }

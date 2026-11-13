@@ -4,12 +4,30 @@ import { cookies } from "next/headers";
 /** Admin access: a single password from the ADMIN_PASSWORD environment variable (never committed). */
 export const ADMIN_COOKIE = "rm_admin";
 
+export const MIN_ADMIN_PASSWORD = 8;
+
+/** Spaces/quotes around the value are ignored (a common copy-paste slip in hosting dashboards). */
+const clean = (v: string) => v.trim().replace(/^["']|["']$/g, "").trim();
+
 function password(): string | null {
-  const p = process.env.ADMIN_PASSWORD;
-  return p && p.length >= 8 ? p : null;
+  const raw = process.env.ADMIN_PASSWORD;
+  const p = raw == null ? "" : clean(raw);
+  return p.length >= MIN_ADMIN_PASSWORD ? p : null;
 }
 
 export const isAdminConfigured = () => password() !== null;
+
+/**
+ * Why admin is off, without ever revealing the password. Names of look-alike settings are shown so
+ * a typo (e.g. "admin_password" or "ADMIN_PASSWORD " with a space) can be spotted.
+ */
+export function adminSetupProblem(): { kind: "missing" | "too_short"; lookalikes: string[]; length?: number } | null {
+  if (password()) return null;
+  const raw = process.env.ADMIN_PASSWORD;
+  const lookalikes = Object.keys(process.env).filter((k) => k !== "ADMIN_PASSWORD" && /admin.?pass/i.test(k.replace(/\s/g, "")));
+  if (raw == null || clean(raw) === "") return { kind: "missing", lookalikes };
+  return { kind: "too_short", lookalikes, length: clean(raw).length };
+}
 
 /** Cookie value: a hash derived from the password, so the password itself is never stored in the browser. */
 function token(p: string) {
@@ -31,7 +49,7 @@ export async function isAdmin(): Promise<boolean> {
 
 export async function adminLogin(attempt: string): Promise<boolean> {
   const p = password();
-  if (!p || !safeEqual(attempt, p)) return false;
+  if (!p || !safeEqual(clean(attempt), p)) return false;
   (await cookies()).set(ADMIN_COOKIE, token(p), {
     httpOnly: true,
     sameSite: "lax",
